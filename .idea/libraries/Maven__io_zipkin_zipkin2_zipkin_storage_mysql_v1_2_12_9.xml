@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.zipkin.zipkin2:zipkin-storage-mysql-v1:2.12.9">
+    <CLASSES>
+      <root url="jar://E:/repository/io/zipkin/zipkin2/zipkin-storage-mysql-v1/2.12.9/zipkin-storage-mysql-v1-2.12.9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/repository/io/zipkin/zipkin2/zipkin-storage-mysql-v1/2.12.9/zipkin-storage-mysql-v1-2.12.9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/repository/io/zipkin/zipkin2/zipkin-storage-mysql-v1/2.12.9/zipkin-storage-mysql-v1-2.12.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

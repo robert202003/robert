@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.cloud.user.mapper.SysMenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysMenu">
+        <id column="menu_id" property="menuId" />
+        <result column="parent_id" property="parentId" />
+        <result column="menu_name" property="menuName" />
+        <result column="menu_sort" property="menuSort" />
+        <result column="menu_type" property="menuType" />
+        <result column="url" property="url" />
+        <result column="visible" property="visible" />
+        <result column="perms" property="perms" />
+        <result column="icon" property="icon" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <select id="listMenuByUserId" resultType="SysMenu">
+        SELECT DISTINCT
+            m.menu_id,
+            parent_id,
+            menu_name,
+            url,
+            perms,
+            menu_type,
+            visible,
+            icon,
+            menu_sort,
+            create_time,
+            update_time
+        FROM
+            sys_menu m
+        LEFT JOIN sys_role_menu rm ON m.menu_id = rm.menu_id
+        LEFT JOIN sys_user_role ur ON rm.role_id = ur.role_id
+        WHERE
+            ur.user_id = #{uid}
+        AND m.menu_type IN (0, 1)
+        AND m.visible =0
+        ORDER BY
+            m.menu_sort
+  </select>
+
+
+    <select id="listUserPermsByUid" resultType="string">
+		SELECT DISTINCT
+		m.perms
+		FROM
+			sys_menu m
+		LEFT JOIN sys_role_menu rm ON m.menu_id = rm.menu_id
+		LEFT JOIN sys_user_role ur ON rm.role_id = ur.role_id
+		WHERE
+			ur.user_id = #{uid}
+	</select>
+
+</mapper>

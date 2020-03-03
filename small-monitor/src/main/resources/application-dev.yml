@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: small-monitor
+server:
+  port: 9040 #启动端口
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

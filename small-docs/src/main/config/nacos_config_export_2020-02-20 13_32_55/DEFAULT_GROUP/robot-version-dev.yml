@@ -1,0 +1,130 @@
+spring:
+  application: robot-version
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: NON_NULL
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://172.16.1.19:3306/bona_robot?allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: dev_wr
+    password: KztRzKIkCD9LhDXU
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+    baseUrl: http://172.16.6.54:9050/
+    sleuth:
+      sampler:
+        percentage: 1.0
+      web:
+        skipPattern: (^cleanup.*)
+#tx-lcn:
+  #client:
+   # manager-address: 127.0.0.1:8070
+
+security:
+  oauth2:
+    resource:
+      id: robot-version
+      #user-info-uri: http://${spring.cloud.client.ip-address}:8050/user/principal?clientName=${spring.application.name}
+      prefer-token-info: false            
+
+##################### mybatis ###############################
+mybatis:
+  type-aliases-package: com.bona.robot.version.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration.map-underscore-to-camel-case: true
+
+#logger
+logging:
+  level:
+    org.mybatis: INFO
+    com.bona.robot.version.mapper: DEBUG
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    com.alibaba.nacos.client.naming: INFO
+
+  boot:
+    admin:
+      client:
+        url: http://${spring.cloud.client.ip-address}:9040	#server端地址
+        username: admin
+        password: admin
+        prefer-ip: true
+        instance:
+          metadata:
+            tags:
+              environment: robot-version监控
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 120000
+  ConnectTimeout: 120000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  OkToRetryOnAllOperations: false
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 500
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000 
+
+robot:
+  oauth2:
+    token:
+      store:
+        type: resJwt                  

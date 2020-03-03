@@ -1,0 +1,25 @@
+[[small-cloud-reference]]
+= Small Cloud 参考文档
+WenXi Luo
+:doctype: book
+:toc:
+:toclevels: 4
+:source-highlighter: prettify
+:numbered:
+
+include::introduction.adoc[]
+
+include::nacos.adoc[]
+
+include::auth.adoc[]
+
+include::gateway.adoc[]
+
+include::monitor.adoc[]
+
+include::starter.adoc[]
+
+include::schedulerx.adoc[]
+
+
+

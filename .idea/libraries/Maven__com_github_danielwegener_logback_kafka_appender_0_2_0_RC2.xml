@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.danielwegener:logback-kafka-appender:0.2.0-RC2">
+    <CLASSES>
+      <root url="jar://E:/repository/com/github/danielwegener/logback-kafka-appender/0.2.0-RC2/logback-kafka-appender-0.2.0-RC2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/repository/com/github/danielwegener/logback-kafka-appender/0.2.0-RC2/logback-kafka-appender-0.2.0-RC2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/repository/com/github/danielwegener/logback-kafka-appender/0.2.0-RC2/logback-kafka-appender-0.2.0-RC2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="small-monitor" />
+        <module name="small-docs" />
+        <module name="small-starter-redis" />
+        <module name="auth-server" />
+        <module name="auth-client" />
+        <module name="small-nacos" />
+        <module name="small-spider" />
+        <module name="small-zipkin" />
+        <module name="small-user" />
+        <module name="small-gateway" />
+        <module name="small-txlcn" />
+        <module name="small-core" />
+        <module name="small-goods" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-client" target="1.8" />
+      <module name="auth-server" target="1.8" />
+      <module name="small-auth" target="1.8" />
+      <module name="small-cloud" target="1.8" />
+      <module name="small-core" target="1.8" />
+      <module name="small-docs" target="1.8" />
+      <module name="small-gateway" target="1.8" />
+      <module name="small-goods" target="1.8" />
+      <module name="small-modules" target="1.8" />
+      <module name="small-monitor" target="1.8" />
+      <module name="small-nacos" target="1.8" />
+      <module name="small-spider" target="1.8" />
+      <module name="small-starter" target="1.8" />
+      <module name="small-starter-redis" target="1.8" />
+      <module name="small-txlcn" target="1.8" />
+      <module name="small-user" target="1.8" />
+      <module name="small-zipkin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

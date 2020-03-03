@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.cloud.auth.mapper.AuthMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.github.cloud.auth.model.SysUser">
+        <id column="user_id" property="userId" />
+        <result column="org_id" property="orgId" />
+        <result column="app_id" property="appId" />
+        <result column="user_name" property="userName" />
+        <result column="password" property="password" />
+        <result column="nick_name" property="nickName" />
+        <result column="user_type" property="userType" />
+        <result column="email" property="email" />
+        <result column="mobile" property="mobile" />
+        <result column="gender" property="gender" />
+        <result column="birth" property="birth" />
+        <result column="is_locked" property="isLocked" />
+        <result column="last_login_date" property="lastLoginDate" />
+        <result column="del_flag" property="delFlag" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <resultMap id="OauthClientDetailsMap" type="com.github.cloud.auth.dto.OauthClientDetailsDTO">
+        <id column="client_id" property="clientId"/>
+        <result column="resource_ids" property="resourceIds"/>
+        <result column="client_secret" property="clientSecret"/>
+        <result column="scope" property="scope"/>
+        <result column="authorized_grant_types" property="authorizedGrantTypes"/>
+        <result column="web_server_redirect_uri" property="webServerRedirectUri"/>
+        <result column="authorities" property="authorities"/>
+        <result column="access_token_validity" property="accessTokenValidity"/>
+        <result column="refresh_token_validity" property="refreshTokenValidity"/>
+        <result column="additional_information" property="additionalInformation"/>
+        <result column="autoapprove" property="autoapprove"/>
+    </resultMap>
+
+    <select id="getUserByUserName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        user_id,
+        user_name,
+        password,
+        user_type,
+        org_id,
+        app_id
+        from sys_user
+        where user_name = #{userName}
+    </select>
+
+    <select id="getUserByUserNameAndAppId" resultMap="BaseResultMap">
+        select
+        user_id,
+        user_name,
+        password,
+        user_type,
+        org_id,
+        app_id
+        from sys_user
+        where user_name = #{userName}
+        and app_id = #{appId}
+    </select>
+
+    <select id="getOauthClientDetailsByClientId" resultMap="OauthClientDetailsMap" parameterType="java.lang.String">
+        SELECT * FROM oauth_client_details WHERE client_id = #{clientId}
+    </select>
+
+    <select id="getResourceIdsByClientId" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT resource_ids FROM `oauth_client_details` WHERE `client_id` = #{clientId}
+    </select>
+
+    <select id="getRolesByUserId" resultType="java.lang.String" parameterType="java.lang.Long">
+     select  b.role_id
+     from sys_user a
+     join sys_user_role b on a.user_id = b.user_id
+     where a.user_id = #{userId}
+    </select>
+
+    <select id="listUserPermsByUid" resultType="java.lang.String">
+		SELECT DISTINCT
+		m.perms
+		FROM
+			sys_menu m
+		LEFT JOIN sys_role_menu rm ON m.menu_id = rm.menu_id
+		LEFT JOIN sys_user_role ur ON rm.role_id = ur.role_id
+		WHERE
+			ur.user_id = #{uid}
+	</select>
+
+</mapper>

@@ -1,0 +1,39 @@
+== Small Cloud Starter
+=== 提供消息驱动的能力，支持RabbitMQ、Kafaka和Redis
+
+```
+small-cloud-starter
+├── rabbitmq
+├── kafka
+├── redis
+└── pom
+```
+
+* 如何使用Redis
+
+```xml
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>small-starter-redis</artifactId>
+</dependency>
+```
+
+
+* 如何使用Kafaka
+
+```xml
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>small-starter-kafaka</artifactId>
+</dependency>
+```
+
+* 如何使用RabbitMQ
+
+```xml
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>small-starter-rabbitmq</artifactId>
+</dependency>
+```
+

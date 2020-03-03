@@ -1,0 +1,4 @@
+com\github\cloud\goods\controller\TestController.class
+com\github\cloud\GoodsApplication.class
+com\github\cloud\goods\config\WebMvcConfig.class
+com\github\cloud\goods\config\ResourceSeverConfig.class

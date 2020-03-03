@@ -1,0 +1,16 @@
+2020-02-20 13:43:28,405 WARN [dump-ignore] ignore to save cache file. groupKey=small-auth-dev.yml+dev+3203f198-36cd-4bb3-9e7f-81d2e6c3eac8, md5=55948a32b59b92ffb5a99922ee9eff7d, lastModifiedOld=1582177227808, lastModifiedNew=1582177408350
+
+2020-02-20 15:36:08,287 INFO [dump-all-ok] small-auth.yml+dev, 1582178839545, length=1942, md5=9597fc48cbdf42168173886fa41ca98d
+
+2020-02-20 15:36:08,288 INFO [dump-all-ok] small-gateway.yml+dev, 1582179725074, length=2079, md5=8a4165cda676c6d906ef4913a44ba322
+
+2020-02-20 15:36:08,288 INFO [dump-all-ok] small-user.yml+dev, 1582179279558, length=2993, md5=cd46c318f17ce88f644ad0fb0068acd4
+
+2020-02-20 15:55:26,304 WARN [dump-ignore] ignore to save cache file. groupKey=small-gateway.yml+dev+3203f198-36cd-4bb3-9e7f-81d2e6c3eac8, md5=8a4165cda676c6d906ef4913a44ba322, lastModifiedOld=1582179725074, lastModifiedNew=1582185325941
+
+2020-02-20 22:12:12,296 INFO [dump-all-ok] small-auth.yml+dev, 1582178839545, length=1942, md5=9597fc48cbdf42168173886fa41ca98d
+
+2020-02-20 22:12:12,296 INFO [dump-all-ok] small-gateway.yml+dev, 1582185325941, length=2079, md5=8a4165cda676c6d906ef4913a44ba322
+
+2020-02-20 22:12:12,297 INFO [dump-all-ok] small-user.yml+dev, 1582179279558, length=2993, md5=cd46c318f17ce88f644ad0fb0068acd4
+

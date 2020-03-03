@@ -1,0 +1,20 @@
+[
+    {
+        "resource": "robot-menu",
+        "limitApp": "default",
+        "grade": 1,
+        "count": 1,
+        "strategy": 0,
+        "controlBehavior": 0,
+        "clusterMode": false
+    },
+    {
+        "resource": "robot-user",
+        "limitApp": "default",
+        "grade": 1,
+        "count": 10,
+        "strategy": 0,
+        "controlBehavior": 0,
+        "clusterMode": false
+    }
+]

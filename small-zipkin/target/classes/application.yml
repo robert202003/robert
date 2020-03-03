@@ -1,0 +1,59 @@
+server:
+  port: 9050
+
+spring:
+  application:
+    name: small-zipkin
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.1.111:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.16.1.19:3306/bona_robot?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: dev_wr
+    password: KztRzKIkCD9LhDXU
+
+  config:
+    name: zipkin
+    username: admin
+    password: configPassword
+    discovery:
+      service-id: config
+      enabled: true
+
+  boot:
+    admin:
+      client:
+        url: http://${spring.cloud.client.ip-address}:9040    #server端地址
+        username: admin
+        password: admin
+        prefer-ip: true
+        instance:
+          metadata:
+            tags:
+              environment: small-zipkin监控
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+sleuth:
+  enabled: false
+
+zipkin:
+  storage:
+    type: mysql
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.cloud.user.mapper.SysRoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysRole">
+        <id column="role_id" property="roleId" />
+        <result column="role_name" property="roleName" />
+        <result column="role_name_en" property="roleNameEn" />
+        <result column="role_sign" property="roleSign" />
+        <result column="role_sort" property="roleSort" />
+        <result column="data_scope" property="dataScope" />
+        <result column="del_flag" property="delFlag" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+    <!-- 通用查询映射结果 -->
+    <resultMap id="SysRoleDTOResultMap" type="com.github.cloud.user.dto.SysRoleDTO">
+        <id column="role_id" property="roleId" />
+        <result column="role_name" property="roleName" />
+        <result column="role_name_en" property="roleNameEn" />
+        <result column="role_sign" property="roleSign" />
+        <result column="role_sort" property="roleSort" />
+        <result column="data_scope" property="dataScope" />
+        <result column="del_flag" property="delFlag" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <select id="selectRolesByUserId" parameterType="java.lang.String" resultMap="SysRoleDTOResultMap">
+		SELECT r.*
+        FROM sys_role r
+        INNER JOIN sys_user_role ur ON ur.role_id = r.role_id
+        WHERE ur.user_id =#{user_id}
+        ORDER BY r.role_sort ASC
+	</select>
+
+</mapper>
