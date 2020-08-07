@@ -1,6 +1,6 @@
-package org.robert.model.config;
+package org.robert.auth.server.config;
 
-import org.robert.model.service.AccountUserDetailsService;
+import org.robert.auth.server.service.AccountUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package org.robert.model.dto;
+package org.robert.auth.server.dto;
 
 import java.io.Serializable;
 

@@ -1,11 +1,11 @@
-package org.robert.model.service;
+package org.robert.auth.server.service;
 
-import org.robert.model.dto.AuthUserDTO;
-import org.robert.model.mapper.AuthMapper;
-import org.robert.model.model.SysUser;
-import com.github.cloud.core.enums.UserTypeEnum;
-import com.github.cloud.core.util.StringUtils;
+import org.robert.auth.server.dto.AuthUserDTO;
+import org.robert.auth.server.mapper.AuthMapper;
+import org.robert.auth.server.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
+import org.robert.core.enums.UserTypeEnum;
+import org.robert.core.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

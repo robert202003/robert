@@ -1,9 +1,9 @@
-package org.robert.model.config;
+package org.robert.auth.server.config;
 
-import org.robert.model.dto.AuthUserDTO;
-import org.robert.model.service.AccountUserDetailsService;
-import com.github.cloud.core.constant.SecurityConstants;
-import com.github.cloud.core.util.SpringContextHolder;
+import org.robert.auth.server.dto.AuthUserDTO;
+import org.robert.auth.server.service.AccountUserDetailsService;
+import org.robert.core.constant.SecurityConstants;
+import org.robert.core.util.SpringContextHolder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;

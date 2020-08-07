@@ -1,4 +1,4 @@
-package org.robert.model.config;
+package org.robert.auth.server.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

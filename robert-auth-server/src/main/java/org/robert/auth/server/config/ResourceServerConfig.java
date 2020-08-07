@@ -1,7 +1,7 @@
-package org.robert.model.config;
+package org.robert.auth.server.config;
 
-import com.github.cloud.core.exception.CustomAccessDeniedHandler;
-import com.github.cloud.core.exception.CustomAuthenticationEntryPoint;
+import org.robert.core.exception.CustomAccessDeniedHandler;
+import org.robert.core.exception.CustomAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

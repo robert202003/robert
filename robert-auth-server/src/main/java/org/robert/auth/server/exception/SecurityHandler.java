@@ -1,4 +1,4 @@
-package org.robert.model.exception;
+package org.robert.auth.server.exception;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

@@ -1,9 +1,9 @@
-package org.robert.model.mapper;
+package org.robert.auth.server.mapper;
 
-import org.robert.model.dto.OauthClientDetailsDTO;
-import org.robert.model.model.SysUser;
-import com.github.cloud.core.base.MyMapper;
+import org.robert.auth.server.dto.OauthClientDetailsDTO;
+import org.robert.auth.server.model.SysUser;
 import org.apache.ibatis.annotations.Param;
+import org.robert.core.base.MyMapper;
 
 import java.util.List;
 

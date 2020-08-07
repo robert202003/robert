@@ -1,4 +1,4 @@
-package org.robert.model.model;
+package org.robert.auth.server.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
