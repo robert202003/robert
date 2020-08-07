@@ -1,0 +1,17 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: small-auth
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        group: dev
+        namespace: 3203f198-36cd-4bb3-9e7f-81d2e6c3eac8
+        server-addr: 192.168.216.1:8848
+      discovery:
+        server-addr: 192.168.216.1:8848
+

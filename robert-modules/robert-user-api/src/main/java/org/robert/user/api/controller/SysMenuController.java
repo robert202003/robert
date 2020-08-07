@@ -4,7 +4,7 @@ import org.robert.core.context.RobotContextHolder;
 import org.robert.core.base.R;
 import org.robert.core.model.Tree;
 import org.robert.user.api.dto.SysMenuDTO;
-import org.robert.user.api.model.SysMenu;
+import org.robert.user.api.entity.SysMenu;
 import org.robert.user.api.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

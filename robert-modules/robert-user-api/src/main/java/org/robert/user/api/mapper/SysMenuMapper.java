@@ -1,7 +1,7 @@
 package org.robert.user.api.mapper;
 
 import org.robert.core.base.MyMapper;
-import org.robert.user.api.model.SysMenu;
+import org.robert.user.api.entity.SysMenu;
 
 import java.util.List;
 

@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/robert-docs/robert-docs.iml" filepath="$PROJECT_DIR$/robert-docs/robert-docs.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-gateway/robert-gateway.iml" filepath="$PROJECT_DIR$/robert-gateway/robert-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-goods-api/robert-goods-api.iml" filepath="$PROJECT_DIR$/robert-modules/robert-goods-api/robert-goods-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-id/robert-id.iml" filepath="$PROJECT_DIR$/robert-common/robert-id/robert-id.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-model/robert-model.iml" filepath="$PROJECT_DIR$/robert-model/robert-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-modules.iml" filepath="$PROJECT_DIR$/robert-modules/robert-modules.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-monitor/robert-monitor.iml" filepath="$PROJECT_DIR$/robert-monitor/robert-monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" filepath="$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" />

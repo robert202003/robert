@@ -9,6 +9,7 @@
     <file url="file://$PROJECT_DIR$/robert-common/robert-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-docs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/robert-model" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-modules" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-modules/robert-goods-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-modules/robert-user-api" charset="UTF-8" />

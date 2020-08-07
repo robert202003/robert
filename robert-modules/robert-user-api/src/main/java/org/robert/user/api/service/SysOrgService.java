@@ -1,7 +1,7 @@
 package org.robert.user.api.service;
 
 import org.robert.user.api.dto.SysOrgDTO;
-import org.robert.user.api.model.SysOrg;
+import org.robert.user.api.entity.SysOrg;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package org.robert.user.api.service.impl;
 
 import org.robert.user.api.mapper.SysRoleMapper;
-import org.robert.user.api.model.SysRole;
+import org.robert.user.api.entity.SysRole;
 import org.robert.user.api.service.SysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

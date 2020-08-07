@@ -2,7 +2,7 @@ package org.robert.user.api.mapper;
 
 import org.robert.core.base.MyMapper;
 import org.robert.user.api.dto.SysRoleDTO;
-import org.robert.user.api.model.SysRole;
+import org.robert.user.api.entity.SysRole;
 
 import java.util.List;
 

@@ -12,6 +12,7 @@
         <module name="robert-gateway" />
         <module name="robert-redis" />
         <module name="robert-user-api" />
+        <module name="robert-model" />
         <module name="robert-core" />
         <module name="robert-auth-server" />
         <module name="robert-docs" />
@@ -26,6 +27,7 @@
       <module name="robert-docs" target="1.8" />
       <module name="robert-gateway" target="1.8" />
       <module name="robert-goods-api" target="1.8" />
+      <module name="robert-model" target="1.8" />
       <module name="robert-modules" target="1.8" />
       <module name="robert-monitor" target="1.8" />
       <module name="robert-redis" target="1.8" />

@@ -1,7 +1,7 @@
 package org.robert.user.api.mapper;
 
 import org.robert.core.base.MyMapper;
-import org.robert.user.api.model.SysOrg;
+import org.robert.user.api.entity.SysOrg;
 
 /**
  * <p>

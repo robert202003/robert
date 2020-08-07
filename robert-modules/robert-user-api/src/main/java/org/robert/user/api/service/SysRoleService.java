@@ -1,7 +1,7 @@
 package org.robert.user.api.service;
 
 
-import org.robert.user.api.model.SysRole;
+import org.robert.user.api.entity.SysRole;
 
 import java.util.List;
 

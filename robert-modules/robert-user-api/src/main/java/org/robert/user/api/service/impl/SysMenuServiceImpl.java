@@ -9,7 +9,7 @@ import org.robert.core.util.StringUtils;
 import org.robert.user.api.dto.SysMenuDTO;
 import org.robert.user.api.mapper.SysMenuMapper;
 import org.robert.user.api.mapper.SysMenuRoleMapper;
-import org.robert.user.api.model.SysMenu;
+import org.robert.user.api.entity.SysMenu;
 import org.robert.user.api.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

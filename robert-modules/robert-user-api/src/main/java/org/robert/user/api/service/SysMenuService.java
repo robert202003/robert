@@ -2,7 +2,7 @@ package org.robert.user.api.service;
 
 import org.robert.core.model.Tree;
 import org.robert.user.api.dto.SysMenuDTO;
-import org.robert.user.api.model.SysMenu;
+import org.robert.user.api.entity.SysMenu;
 
 import java.util.List;
 import java.util.Map;

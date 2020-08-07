@@ -3,7 +3,7 @@ package org.robert.user.api.service.impl;
 import org.robert.core.util.BeanUtils;
 import org.robert.user.api.dto.SysOrgDTO;
 import org.robert.user.api.mapper.SysOrgMapper;
-import org.robert.user.api.model.SysOrg;
+import org.robert.user.api.entity.SysOrg;
 import org.robert.user.api.service.SysOrgService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
