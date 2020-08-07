@@ -3,20 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <artifactId>robert-common</artifactId>
         <groupId>org.robert</groupId>
-        <artifactId>robert-build</artifactId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>robert-common</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>robert-redis</module>
-        <module>robert-core</module>
-        <module>robert-id</module>
-        <module>robert-mongo</module>
-        <module>robert-stream</module>
-    </modules>
+    <artifactId>robert-mongo</artifactId>
+
 
 </project>

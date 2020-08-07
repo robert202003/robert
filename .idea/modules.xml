@@ -13,8 +13,10 @@
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-id/robert-id.iml" filepath="$PROJECT_DIR$/robert-common/robert-id/robert-id.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-model/robert-model.iml" filepath="$PROJECT_DIR$/robert-model/robert-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-modules.iml" filepath="$PROJECT_DIR$/robert-modules/robert-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-mongo/robert-mongo.iml" filepath="$PROJECT_DIR$/robert-common/robert-mongo/robert-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-monitor/robert-monitor.iml" filepath="$PROJECT_DIR$/robert-monitor/robert-monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" filepath="$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-stream/robert-stream.iml" filepath="$PROJECT_DIR$/robert-common/robert-stream/robert-stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-user-api/robert-user-api.iml" filepath="$PROJECT_DIR$/robert-modules/robert-user-api/robert-user-api.iml" />
     </modules>
   </component>
