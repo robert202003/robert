@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/auth-client/auth-client.iml" filepath="$PROJECT_DIR$/auth-client/auth-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-server/auth-server.iml" filepath="$PROJECT_DIR$/auth-server/auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-auth-client/auth-client.iml" filepath="$PROJECT_DIR$/robert-auth-client/auth-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/robert.iml" filepath="$PROJECT_DIR$/.idea/robert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-auth-client/robert-auth-client.iml" filepath="$PROJECT_DIR$/robert-auth-client/robert-auth-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-auth-server/robert-auth-server.iml" filepath="$PROJECT_DIR$/robert-auth-server/robert-auth-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-common.iml" filepath="$PROJECT_DIR$/robert-common/robert-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/robert-core/robert-core.iml" filepath="$PROJECT_DIR$/robert-core/robert-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-core/robert-core.iml" filepath="$PROJECT_DIR$/robert-common/robert-core/robert-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-docs/robert-docs.iml" filepath="$PROJECT_DIR$/robert-docs/robert-docs.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-gateway/robert-gateway.iml" filepath="$PROJECT_DIR$/robert-gateway/robert-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-goods-api/robert-goods-api.iml" filepath="$PROJECT_DIR$/robert-modules/robert-goods-api/robert-goods-api.iml" />

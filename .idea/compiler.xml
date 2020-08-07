@@ -6,16 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="robert-auth-client" />
         <module name="robert-monitor" />
         <module name="robert-goods-api" />
         <module name="robert-gateway" />
         <module name="robert-redis" />
         <module name="robert-user-api" />
-        <module name="auth-server" />
         <module name="robert-user" />
         <module name="small-goods" />
         <module name="auth-client" />
         <module name="robert-core" />
+        <module name="robert-auth-server" />
         <module name="robert-docs" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,8 @@
       <module name="auth-client" target="1.8" />
       <module name="auth-server" target="1.8" />
       <module name="robert" target="1.8" />
+      <module name="robert-auth-client" target="1.8" />
+      <module name="robert-auth-server" target="1.8" />
       <module name="robert-common" target="1.8" />
       <module name="robert-core" target="1.8" />
       <module name="robert-docs" target="1.8" />

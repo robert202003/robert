@@ -87,7 +87,7 @@
         </dependency>
         <dependency>
             <groupId>org.robert</groupId>
-            <artifactId>auth-client</artifactId>
+            <artifactId>robert-auth-client</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>

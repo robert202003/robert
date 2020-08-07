@@ -7,11 +7,10 @@
         <module>robert-gateway</module>
         <module>robert-modules</module>
         <module>robert-monitor</module>
-        <module>robert-core</module>
         <module>robert-docs</module>
         <module>robert-common</module>
-        <module>auth-client</module>
-        <module>auth-server</module>
+        <module>robert-auth-client</module>
+        <module>robert-auth-server</module>
     </modules>
 
     <groupId>org.robert</groupId>

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>auth-server</artifactId>
+    <artifactId>robert-auth-server</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
