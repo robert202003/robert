@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" filepath="$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-starter.iml" filepath="$PROJECT_DIR$/robert-common/robert-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-user-api/robert-user.iml" filepath="$PROJECT_DIR$/robert-modules/robert-user-api/robert-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-user-api/robert-user-api.iml" filepath="$PROJECT_DIR$/robert-modules/robert-user-api/robert-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/small-modules/small-goods/small-goods.iml" filepath="$PROJECT_DIR$/small-modules/small-goods/small-goods.iml" />
     </modules>
   </component>

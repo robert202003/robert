@@ -14,14 +14,14 @@
         <module>auth-server</module>
     </modules>
 
-    <groupId>org.springframework.cloud</groupId>
+    <groupId>org.robert</groupId>
     <artifactId>robert-build</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>robert-build</name>
 
     <description>robert is a enterprise level scaffolding for Spring Cloud</description>
-    <url>https://github.com/java20181218/smallcloud</url>
+    <url>https://github.com/yulo2020/robert.git</url>
 
     <properties>
         <project.version>1.0.0</project.version>

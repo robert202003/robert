@@ -9,12 +9,13 @@
         <module name="robert-monitor" />
         <module name="robert-goods-api" />
         <module name="robert-gateway" />
-        <module name="auth-client" />
         <module name="robert-redis" />
-        <module name="robert-user" />
+        <module name="robert-user-api" />
         <module name="auth-server" />
-        <module name="robert-core" />
+        <module name="robert-user" />
         <module name="small-goods" />
+        <module name="auth-client" />
+        <module name="robert-core" />
         <module name="robert-docs" />
       </profile>
     </annotationProcessing>
@@ -32,6 +33,7 @@
       <module name="robert-redis" target="1.8" />
       <module name="robert-starter" target="1.8" />
       <module name="robert-user" target="1.8" />
+      <module name="robert-user-api" target="1.8" />
       <module name="small-auth" target="1.8" />
       <module name="small-core" target="1.8" />
       <module name="small-docs" target="1.8" />

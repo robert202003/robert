@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <groupId>org.robert</groupId>
         <artifactId>robert-modules</artifactId>
-        <groupId>org.springframework.cloud</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -78,8 +78,9 @@
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
+            <groupId>org.robert</groupId>
             <artifactId>robert-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <!-- 集成LCN分布式框架 -->
         <!--<dependency>
