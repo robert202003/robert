@@ -1,0 +1,12 @@
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\config\WebSecurityConfig.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\model\SysUser.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\mapper\AuthMapper.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\dto\AuthUserDTO.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\dto\OauthClientDetailsDTO.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\service\AccountUserDetailsService.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\config\MyTokenEnhancer.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\config\ResourceServerConfig.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\exception\SecurityHandler.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\AuthApplication.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\config\AuthorizationServerConfig.java
+G:\small-cloud\small-auth\auth-server\src\main\java\com\github\cloud\auth\controller\UserController.java

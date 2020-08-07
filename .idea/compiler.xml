@@ -6,26 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="small-monitor" />
-        <module name="small-docs" />
-        <module name="small-starter-redis" />
-        <module name="auth-server" />
+        <module name="robert-monitor" />
+        <module name="robert-goods-api" />
+        <module name="robert-gateway" />
         <module name="auth-client" />
-        <module name="small-nacos" />
-        <module name="small-spider" />
-        <module name="small-zipkin" />
-        <module name="small-user" />
-        <module name="small-gateway" />
-        <module name="small-txlcn" />
-        <module name="small-core" />
+        <module name="robert-redis" />
+        <module name="robert-user" />
+        <module name="auth-server" />
+        <module name="robert-core" />
         <module name="small-goods" />
+        <module name="robert-docs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="auth-client" target="1.8" />
       <module name="auth-server" target="1.8" />
+      <module name="robert" target="1.8" />
+      <module name="robert-common" target="1.8" />
+      <module name="robert-core" target="1.8" />
+      <module name="robert-docs" target="1.8" />
+      <module name="robert-gateway" target="1.8" />
+      <module name="robert-goods-api" target="1.8" />
+      <module name="robert-modules" target="1.8" />
+      <module name="robert-monitor" target="1.8" />
+      <module name="robert-redis" target="1.8" />
+      <module name="robert-starter" target="1.8" />
+      <module name="robert-user" target="1.8" />
       <module name="small-auth" target="1.8" />
-      <module name="small-cloud" target="1.8" />
       <module name="small-core" target="1.8" />
       <module name="small-docs" target="1.8" />
       <module name="small-gateway" target="1.8" />

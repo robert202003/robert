@@ -4,25 +4,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
-        <module>small-gateway</module>
-        <module>small-modules</module>
-        <module>small-monitor</module>
-        <module>small-core</module>
-        <module>small-zipkin</module>
-        <module>small-docs</module>
-        <module>small-txlcn</module>
-        <module>small-nacos</module>
-        <module>small-starter</module>
-        <module>small-auth</module>
+        <module>robert-gateway</module>
+        <module>robert-modules</module>
+        <module>robert-monitor</module>
+        <module>robert-core</module>
+        <module>robert-docs</module>
+        <module>robert-common</module>
+        <module>auth-client</module>
+        <module>auth-server</module>
     </modules>
 
     <groupId>org.springframework.cloud</groupId>
-    <artifactId>small-cloud-build</artifactId>
+    <artifactId>robert-build</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>small-cloud-build</name>
+    <name>robert-build</name>
 
-    <description>small-cloud is a enterprise level scaffolding for Spring Cloud</description>
+    <description>robert is a enterprise level scaffolding for Spring Cloud</description>
     <url>https://github.com/java20181218/smallcloud</url>
 
     <properties>
@@ -41,7 +39,7 @@
         <mybatis.version>3.4.1</mybatis.version>
         <mybatis.spring.version>1.3.2</mybatis.spring.version>
         <mybatis-spring-boot-starter.vesion>2.0.1</mybatis-spring-boot-starter.vesion>
-        <mysql-connector-java.version>6.0.5</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <druid.version>1.1.8</druid.version>
         <lombok.version>1.18.10</lombok.version>
         <httpclient.version>4.5.3</httpclient.version>

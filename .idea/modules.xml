@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/small-auth/auth-client/auth-client.iml" filepath="$PROJECT_DIR$/small-auth/auth-client/auth-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-auth/auth-server/auth-server.iml" filepath="$PROJECT_DIR$/small-auth/auth-server/auth-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-auth/small-auth.iml" filepath="$PROJECT_DIR$/small-auth/small-auth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/small-cloud.iml" filepath="$PROJECT_DIR$/.idea/small-cloud.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-core/small-core.iml" filepath="$PROJECT_DIR$/small-core/small-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-docs/small-docs.iml" filepath="$PROJECT_DIR$/small-docs/small-docs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-gateway/small-gateway.iml" filepath="$PROJECT_DIR$/small-gateway/small-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-client/auth-client.iml" filepath="$PROJECT_DIR$/auth-client/auth-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-server/auth-server.iml" filepath="$PROJECT_DIR$/auth-server/auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/robert.iml" filepath="$PROJECT_DIR$/.idea/robert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-common.iml" filepath="$PROJECT_DIR$/robert-common/robert-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-core/robert-core.iml" filepath="$PROJECT_DIR$/robert-core/robert-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-docs/robert-docs.iml" filepath="$PROJECT_DIR$/robert-docs/robert-docs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-gateway/robert-gateway.iml" filepath="$PROJECT_DIR$/robert-gateway/robert-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-goods-api/robert-goods-api.iml" filepath="$PROJECT_DIR$/robert-modules/robert-goods-api/robert-goods-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-modules.iml" filepath="$PROJECT_DIR$/robert-modules/robert-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-monitor/robert-monitor.iml" filepath="$PROJECT_DIR$/robert-monitor/robert-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" filepath="$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-starter.iml" filepath="$PROJECT_DIR$/robert-common/robert-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-user-api/robert-user.iml" filepath="$PROJECT_DIR$/robert-modules/robert-user-api/robert-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/small-modules/small-goods/small-goods.iml" filepath="$PROJECT_DIR$/small-modules/small-goods/small-goods.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-modules/small-modules.iml" filepath="$PROJECT_DIR$/small-modules/small-modules.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-monitor/small-monitor.iml" filepath="$PROJECT_DIR$/small-monitor/small-monitor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-nacos/small-nacos.iml" filepath="$PROJECT_DIR$/small-nacos/small-nacos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-modules/small-spider/small-spider.iml" filepath="$PROJECT_DIR$/small-modules/small-spider/small-spider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-starter/small-starter.iml" filepath="$PROJECT_DIR$/small-starter/small-starter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-starter/small-starter-redis/small-starter-redis.iml" filepath="$PROJECT_DIR$/small-starter/small-starter-redis/small-starter-redis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-txlcn/small-txlcn.iml" filepath="$PROJECT_DIR$/small-txlcn/small-txlcn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-modules/small-user/small-user.iml" filepath="$PROJECT_DIR$/small-modules/small-user/small-user.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-zipkin/small-zipkin.iml" filepath="$PROJECT_DIR$/small-zipkin/small-zipkin.iml" />
     </modules>
   </component>
 </project>
