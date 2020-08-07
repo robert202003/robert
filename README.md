@@ -14,7 +14,7 @@ robert致力于为微服务开发提供一个脚手架。 该项目包括用于�
 ## 主要功能
 * **服务认证授权**：基于Spring Security和OAuth2框架，支持4种授权模式，分为auth-server和auth-client，满足功能的同时尽可能的让代码简洁。
 * **服务注册、发现和配置**：默认使用阿里的Nacos作为服务注册、发现和远程配置，生产环境可集群。
-* **分布式基础公共支持**：small-core包含了常用的公共核心类。
+* **分布式基础公共支持**：robert-core包含了常用的公共核心类。
 * **网关服务**：以Spring Cloud官方的spring-cloud-gateway作为网关，支持动态路由、参数验签、token验证、限流和熔断等服务。
 * **系统监控**：基于 spring-boot-admin-starter-server 为微服务应用实时监控的能力。
 * **分布式事务**：基于txcln，使用 @EnableTransactionManagement 注解， 高效并且对业务几乎零侵入地解决分布式事务问题。
@@ -34,14 +34,11 @@ robert                    -- 父项目，依赖管理
 │  ├─robert-modules               -- 业务模块一级工程
 │  │  ├─robert-order-api         -- 订单服务
 │  │  ├─robert-user-api          -- 用户中心[8020]
-│  │  ├─robert-spider        -- 网络蜘蛛工程
 │  ├─robert-monitor       -- 监控中心
 │  ├─robert-naocos        -- 服务注册和配置中心
-│  ├─robert-starter        -- starter通用工具一级工程
-│  │  ├─small-starter-redis --redis
+│  ├─robert-common        -- 通用工程一级工程
+│  │  ├─robert-redis --redis
 │  │  ├─敬请期待
-│  ├─small-txlcn          -- txlcn分布式事务管理服务
-│  ├─small-zipkin         -- 服务链路追踪服务
 
 ```
 
