@@ -1,7 +1,7 @@
-package com.github.cloud.user.mapper;
+package org.robert.user.api.mapper;
 
-import com.github.cloud.core.base.MyMapper;
-import com.github.cloud.user.model.SysMenuRole;
+import org.robert.core.base.MyMapper;
+import org.robert.user.api.model.SysMenuRole;
 
 import java.util.List;
 

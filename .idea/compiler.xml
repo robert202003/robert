@@ -12,17 +12,12 @@
         <module name="robert-gateway" />
         <module name="robert-redis" />
         <module name="robert-user-api" />
-        <module name="robert-user" />
-        <module name="small-goods" />
-        <module name="auth-client" />
         <module name="robert-core" />
         <module name="robert-auth-server" />
         <module name="robert-docs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="auth-client" target="1.8" />
-      <module name="auth-server" target="1.8" />
       <module name="robert" target="1.8" />
       <module name="robert-auth-client" target="1.8" />
       <module name="robert-auth-server" target="1.8" />
@@ -34,23 +29,7 @@
       <module name="robert-modules" target="1.8" />
       <module name="robert-monitor" target="1.8" />
       <module name="robert-redis" target="1.8" />
-      <module name="robert-starter" target="1.8" />
-      <module name="robert-user" target="1.8" />
       <module name="robert-user-api" target="1.8" />
-      <module name="small-auth" target="1.8" />
-      <module name="small-core" target="1.8" />
-      <module name="small-docs" target="1.8" />
-      <module name="small-gateway" target="1.8" />
-      <module name="small-goods" target="1.8" />
-      <module name="small-modules" target="1.8" />
-      <module name="small-monitor" target="1.8" />
-      <module name="small-nacos" target="1.8" />
-      <module name="small-spider" target="1.8" />
-      <module name="small-starter" target="1.8" />
-      <module name="small-starter-redis" target="1.8" />
-      <module name="small-txlcn" target="1.8" />
-      <module name="small-user" target="1.8" />
-      <module name="small-zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.github.cloud.user.service;
+package org.robert.user.api.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.lionsoul.ip2region.DataBlock;

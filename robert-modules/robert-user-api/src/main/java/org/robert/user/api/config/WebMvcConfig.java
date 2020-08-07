@@ -1,6 +1,6 @@
-package com.github.cloud.user.config;
+package org.robert.user.api.config;
 
-import com.github.cloud.core.config.DefaultWebMvcConfig;
+import org.robert.core.config.DefaultWebMvcConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 

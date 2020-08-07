@@ -1,8 +1,8 @@
-package com.github.cloud.user.mapper;
+package org.robert.user.api.mapper;
 
-import com.github.cloud.core.base.MyMapper;
-import com.github.cloud.user.dto.SysRoleDTO;
-import com.github.cloud.user.model.SysRole;
+import org.robert.core.base.MyMapper;
+import org.robert.user.api.dto.SysRoleDTO;
+import org.robert.user.api.model.SysRole;
 
 import java.util.List;
 

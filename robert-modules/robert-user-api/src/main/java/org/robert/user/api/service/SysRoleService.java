@@ -1,7 +1,7 @@
-package com.github.cloud.user.service;
+package org.robert.user.api.service;
 
 
-import com.github.cloud.user.model.SysRole;
+import org.robert.user.api.model.SysRole;
 
 import java.util.List;
 

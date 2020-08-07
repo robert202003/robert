@@ -1,4 +1,4 @@
-package com.github.cloud.goods.config;
+package org.robert.goods.config;
 
 import com.github.cloud.core.exception.CustomAccessDeniedHandler;
 import com.github.cloud.core.exception.CustomAuthenticationEntryPoint;

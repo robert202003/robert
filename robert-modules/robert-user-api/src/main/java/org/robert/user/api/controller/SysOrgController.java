@@ -1,9 +1,9 @@
-package com.github.cloud.user.controller;
+package org.robert.user.api.controller;
 
-import com.github.cloud.core.annotation.PageQuery;
-import com.github.cloud.core.base.R;
-import com.github.cloud.user.dto.SysOrgDTO;
-import com.github.cloud.user.service.SysOrgService;
+import org.robert.core.annotation.PageQuery;
+import org.robert.core.base.R;
+import org.robert.user.api.dto.SysOrgDTO;
+import org.robert.user.api.service.SysOrgService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

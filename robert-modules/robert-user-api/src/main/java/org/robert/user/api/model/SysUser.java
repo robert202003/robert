@@ -1,4 +1,4 @@
-package com.github.cloud.user.model;
+package org.robert.user.api.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;

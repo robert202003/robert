@@ -1,12 +1,12 @@
-package com.github.cloud.user.service;
+package org.robert.user.api.service;
 
-import com.github.cloud.user.dto.OauthTokenDTO;
+import org.robert.user.api.dto.OauthTokenDTO;
 
 import java.util.Map;
 
-import com.github.cloud.user.dto.RefreshTokenDTO;
-import com.github.cloud.user.dto.SysRoleDTO;
-import com.github.cloud.user.dto.SysUserDTO;
+import org.robert.user.api.dto.RefreshTokenDTO;
+import org.robert.user.api.dto.SysRoleDTO;
+import org.robert.user.api.dto.SysUserDTO;
 
 import java.util.List;
 

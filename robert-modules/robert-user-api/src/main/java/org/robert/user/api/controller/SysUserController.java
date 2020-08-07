@@ -1,14 +1,14 @@
-package com.github.cloud.user.controller;
+package org.robert.user.api.controller;
 
-import com.github.cloud.core.annotation.PageQuery;
-import com.github.cloud.core.context.RobotContextHolder;
-import com.github.cloud.core.base.R;
-import com.github.cloud.core.util.StringUtils;
-import com.github.cloud.user.client.GoodsFeign;
-import com.github.cloud.user.dto.OauthTokenDTO;
-import com.github.cloud.user.dto.RefreshTokenDTO;
-import com.github.cloud.user.dto.SysUserDTO;
-import com.github.cloud.user.service.SysUserService;
+import org.robert.core.annotation.PageQuery;
+import org.robert.core.context.RobotContextHolder;
+import org.robert.core.base.R;
+import org.robert.core.util.StringUtils;
+import org.robert.user.api.dto.OauthTokenDTO;
+import org.robert.user.api.dto.RefreshTokenDTO;
+import org.robert.user.api.dto.SysUserDTO;
+import org.robert.user.api.feign.GoodsFeignClient;
+import org.robert.user.api.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -35,7 +35,7 @@ public class SysUserController {
     @Autowired
     private SysUserService userService;
     @Autowired
-    private GoodsFeign versionFeign;
+    private GoodsFeignClient versionFeign;
 
 
     /**

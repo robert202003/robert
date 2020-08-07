@@ -1,8 +1,8 @@
-package com.github.cloud.user.service.impl;
+package org.robert.user.api.service.impl;
 
-import com.github.cloud.user.mapper.SysRoleMapper;
-import com.github.cloud.user.model.SysRole;
-import com.github.cloud.user.service.SysRoleService;
+import org.robert.user.api.mapper.SysRoleMapper;
+import org.robert.user.api.model.SysRole;
+import org.robert.user.api.service.SysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

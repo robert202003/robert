@@ -1,9 +1,9 @@
-package com.github.cloud.user.mapper;
+package org.robert.user.api.mapper;
 
-import com.github.cloud.core.base.MyMapper;
-import com.github.cloud.core.mapper.UserMapper;
-import com.github.cloud.user.dto.SysUserDTO;
-import com.github.cloud.user.model.SysUser;
+import org.robert.core.base.MyMapper;
+import org.robert.core.mapper.UserMapper;
+import org.robert.user.api.dto.SysUserDTO;
+import org.robert.user.api.model.SysUser;
 
 import java.util.List;
 

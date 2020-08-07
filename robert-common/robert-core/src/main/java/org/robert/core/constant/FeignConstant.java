@@ -5,8 +5,8 @@ package org.robert.core.constant;
  */
 public class FeignConstant {
 
-    public static final String SMALL_USERR = "small-user";
-    public static final String SMALL_GOODS = "small-goods";
-    public static final String SMALL_OAUTH = "small-auth";
+    public static final String SMALL_USER = "robert-user-api";
+    public static final String SMALL_GOODS = "robert-goods-api";
+    public static final String SMALL_OAUTH = "robert-auth-server";
 
 }

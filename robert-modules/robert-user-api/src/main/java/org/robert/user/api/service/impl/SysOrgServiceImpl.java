@@ -1,10 +1,10 @@
-package com.github.cloud.user.service.impl;
+package org.robert.user.api.service.impl;
 
-import com.github.cloud.core.util.BeanUtils;
-import com.github.cloud.user.dto.SysOrgDTO;
-import com.github.cloud.user.mapper.SysOrgMapper;
-import com.github.cloud.user.model.SysOrg;
-import com.github.cloud.user.service.SysOrgService;
+import org.robert.core.util.BeanUtils;
+import org.robert.user.api.dto.SysOrgDTO;
+import org.robert.user.api.mapper.SysOrgMapper;
+import org.robert.user.api.model.SysOrg;
+import org.robert.user.api.service.SysOrgService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

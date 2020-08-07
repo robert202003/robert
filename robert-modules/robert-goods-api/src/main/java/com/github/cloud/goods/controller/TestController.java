@@ -1,4 +1,4 @@
-package com.github.cloud.goods.controller;
+package org.robert.goods.controller;
 
 import com.github.cloud.core.base.R;
 import org.springframework.web.bind.annotation.PostMapping;

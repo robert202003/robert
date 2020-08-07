@@ -1,6 +1,6 @@
-package com.github.cloud.user.client;
+package org.robert.user.api.feign;
 
-import com.github.cloud.core.constant.FeignConstant;
+import org.robert.core.constant.FeignConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,7 +11,7 @@ import java.util.Map;
  * feign调用robot-oauth服务
  */
 @FeignClient(value = FeignConstant.SMALL_OAUTH)
-public interface OauthFeign {
+public interface OauthFeignClient {
 
     /**
      * 获取token

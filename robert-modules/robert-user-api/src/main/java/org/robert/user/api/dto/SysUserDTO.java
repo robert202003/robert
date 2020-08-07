@@ -1,4 +1,4 @@
-package com.github.cloud.user.dto;
+package org.robert.user.api.dto;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;

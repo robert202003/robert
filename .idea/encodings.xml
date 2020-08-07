@@ -2,14 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/auth-client" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/auth-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-auth-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-auth-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-common/robert-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-common/robert-redis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/robert-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-docs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/robert-modules" charset="UTF-8" />

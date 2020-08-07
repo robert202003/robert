@@ -1,7 +1,7 @@
-package com.github.cloud.user.service;
+package org.robert.user.api.service;
 
-import com.github.cloud.user.dto.SysOrgDTO;
-import com.github.cloud.user.model.SysOrg;
+import org.robert.user.api.dto.SysOrgDTO;
+import org.robert.user.api.model.SysOrg;
 
 import java.util.List;
 

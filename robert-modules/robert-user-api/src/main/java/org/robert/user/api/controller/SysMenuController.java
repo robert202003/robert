@@ -1,11 +1,11 @@
-package com.github.cloud.user.controller;
+package org.robert.user.api.controller;
 
-import com.github.cloud.core.context.RobotContextHolder;
-import com.github.cloud.core.base.R;
-import com.github.cloud.core.model.Tree;
-import com.github.cloud.user.dto.SysMenuDTO;
-import com.github.cloud.user.model.SysMenu;
-import com.github.cloud.user.service.SysMenuService;
+import org.robert.core.context.RobotContextHolder;
+import org.robert.core.base.R;
+import org.robert.core.model.Tree;
+import org.robert.user.api.dto.SysMenuDTO;
+import org.robert.user.api.model.SysMenu;
+import org.robert.user.api.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

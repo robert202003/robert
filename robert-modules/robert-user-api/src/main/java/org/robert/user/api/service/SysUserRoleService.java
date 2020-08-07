@@ -1,4 +1,4 @@
-package com.github.cloud.user.service;
+package org.robert.user.api.service;
 
 /**
  * <p>

@@ -1,6 +1,6 @@
-package com.github.cloud.user.service.impl;
+package org.robert.user.api.service.impl;
 
-import com.github.cloud.user.service.SysMenuRoleService;
+import org.robert.user.api.service.SysMenuRoleService;
 import org.springframework.stereotype.Service;
 
 /**

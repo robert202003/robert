@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/robert-auth-client/auth-client.iml" filepath="$PROJECT_DIR$/robert-auth-client/auth-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/robert.iml" filepath="$PROJECT_DIR$/.idea/robert.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-auth-client/robert-auth-client.iml" filepath="$PROJECT_DIR$/robert-auth-client/robert-auth-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-auth-server/robert-auth-server.iml" filepath="$PROJECT_DIR$/robert-auth-server/robert-auth-server.iml" />
@@ -14,10 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-modules.iml" filepath="$PROJECT_DIR$/robert-modules/robert-modules.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-monitor/robert-monitor.iml" filepath="$PROJECT_DIR$/robert-monitor/robert-monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" filepath="$PROJECT_DIR$/robert-common/robert-redis/robert-redis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/robert-common/robert-starter.iml" filepath="$PROJECT_DIR$/robert-common/robert-starter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-user-api/robert-user.iml" filepath="$PROJECT_DIR$/robert-modules/robert-user-api/robert-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/robert-modules/robert-user-api/robert-user-api.iml" filepath="$PROJECT_DIR$/robert-modules/robert-user-api/robert-user-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/small-modules/small-goods/small-goods.iml" filepath="$PROJECT_DIR$/small-modules/small-goods/small-goods.iml" />
     </modules>
   </component>
 </project>

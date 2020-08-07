@@ -1,16 +1,16 @@
-package com.github.cloud.user.service.impl;
+package org.robert.user.api.service.impl;
 
-import com.github.cloud.core.context.RobotContextHolder;
-import com.github.cloud.core.exception.ApiException;
-import com.github.cloud.core.model.BuildTree;
-import com.github.cloud.core.model.Tree;
-import com.github.cloud.core.util.BeanUtils;
-import com.github.cloud.core.util.StringUtils;
-import com.github.cloud.user.dto.SysMenuDTO;
-import com.github.cloud.user.mapper.SysMenuMapper;
-import com.github.cloud.user.mapper.SysMenuRoleMapper;
-import com.github.cloud.user.model.SysMenu;
-import com.github.cloud.user.service.SysMenuService;
+import org.robert.core.context.RobotContextHolder;
+import org.robert.core.exception.ApiException;
+import org.robert.core.model.BuildTree;
+import org.robert.core.model.Tree;
+import org.robert.core.util.BeanUtils;
+import org.robert.core.util.StringUtils;
+import org.robert.user.api.dto.SysMenuDTO;
+import org.robert.user.api.mapper.SysMenuMapper;
+import org.robert.user.api.mapper.SysMenuRoleMapper;
+import org.robert.user.api.model.SysMenu;
+import org.robert.user.api.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

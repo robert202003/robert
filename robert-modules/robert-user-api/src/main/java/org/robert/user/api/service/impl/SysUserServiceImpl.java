@@ -1,21 +1,21 @@
-package com.github.cloud.user.service.impl;
+package org.robert.user.api.service.impl;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSONObject;
-import com.github.cloud.core.constant.RedisConstant;
-import com.github.cloud.core.context.LanguageContextHolder;
-import com.github.cloud.core.context.RobotContextHolder;
-import com.github.cloud.core.exception.ApiException;
-import com.github.cloud.user.client.OauthFeign;
-import com.github.cloud.user.dto.OauthTokenDTO;
-import com.github.cloud.user.dto.RefreshTokenDTO;
-import com.github.cloud.user.dto.SysRoleDTO;
-import com.github.cloud.user.dto.SysUserDTO;
-import com.github.cloud.user.mapper.SysUserMapper;
-import com.github.cloud.user.mapper.SysUserRoleMapper;
-import com.github.cloud.user.model.SysUser;
-import com.github.cloud.user.model.SysUserRole;
-import com.github.cloud.user.service.SysUserService;
+import org.robert.core.constant.RedisConstant;
+import org.robert.core.context.LanguageContextHolder;
+import org.robert.core.context.RobotContextHolder;
+import org.robert.core.exception.ApiException;
+import org.robert.core.util.*;
+import org.robert.user.api.dto.OauthTokenDTO;
+import org.robert.user.api.dto.RefreshTokenDTO;
+import org.robert.user.api.dto.SysRoleDTO;
+import org.robert.user.api.dto.SysUserDTO;
+import org.robert.user.api.mapper.SysUserMapper;
+import org.robert.user.api.mapper.SysUserRoleMapper;
+import org.robert.user.api.model.SysUser;
+import org.robert.user.api.model.SysUserRole;
+import org.robert.user.api.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -42,7 +42,8 @@ import java.util.concurrent.TimeUnit;
 public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
-    private OauthFeign oauthFeign;
+    private org.robert.user.api.api.feign.OauthFeignClient oauthFeign;
+
     @Autowired
     private SysUserMapper sysUserMapper;
     @Autowired
