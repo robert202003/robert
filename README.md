@@ -12,16 +12,18 @@ robert致力于为微服务开发提供一个脚手架。 该项目包括用于�
 使用Github，您只需要添加一些注释和少量配置即可将Spring Cloud应用程序连接到分布式应用程序解决方案，并使用此支架快速构建分布式应用程序系统。
 
 ## 主要功能
-* **服务认证授权**：基于Spring Security和OAuth2框架，支持4种授权模式，分为auth-server和auth-client，满足功能的同时尽可能的让代码简洁。
-* **服务注册、发现和配置**：默认使用阿里的Nacos作为服务注册、发现和远程配置，生产环境可集群。
-* **分布式基础公共支持**：robert-core包含了常用的公共核心类。
+* **服务注册**：默认使用阿里的Nacos作为服务注册，生产环境可集群。
+* **服务认证授权**：基于Spring Security和OAuth2框架，支持4种授权模式，分为服务端robert-auth-server和客户端robert-auth-client。
+* **远程配置**：默认使用携程的Apollo作为远程配置服务，个人觉得比Nacos的配置好用。
+* **分布式基础公共支持**：robert-core包含了常用的公共核心类和常见的中间件集成包，开箱即用。
 * **网关服务**：以Spring Cloud官方的spring-cloud-gateway作为网关，支持动态路由、参数验签、token验证、限流和熔断等服务。
 * **系统监控**：基于 spring-boot-admin-starter-server 为微服务应用实时监控的能力。
-* **分布式事务**：基于txcln，使用 @EnableTransactionManagement 注解， 高效并且对业务几乎零侵入地解决分布式事务问题。
-* **服务链路追踪**：基于zipkin提供服务链路追踪，支持mysql持久化。
+* **分布式事务**：基于阿里的Seata， 高效并且对业务几乎零侵入地解决分布式事务问题。
 * **消息驱动能力**：基于 Spring Cloud Stream 为微服务应用构建消息驱动能力。
 * **分布式唯一ID生成器**：分布式唯一ID生成器，增强版的雪花算法，高效唯一有规律，添加robert-id依赖即可使用。
 * **公共包依赖**：集成了Redis，Mongo，RabbitMQ和RocketMQ，日志收集，添加相应的依赖即可使用。
+* **服务链路追踪**：使用skywalking提供服务链路追踪，支持mysql持久化。
+* **应用服务监控**：使用micrometer+prometheus+grafana作为应用服务的监控。业界良心
 
 
 
