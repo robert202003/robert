@@ -75,5 +75,13 @@ robert                       -- 父项目，依赖管理
 
 
 
+## 许可证
+
+[Apache License 2.0](https://github.com/yulo2020/robert/blob/master/LICENSE)
+
+Copyright (c) 2018-2020 macrozheng
+
+
+
 
 
