@@ -1,6 +1,5 @@
 # robert
 
-[![Codecov](https://codecov.io/gh/alibaba/spring-cloud-alibaba/branch/master/graph/badge.svg)](https://codecov.io/gh/alibaba/spring-cloud-alibaba)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 robert维护的一个项目，目前工作在深圳。
@@ -54,27 +53,25 @@ robert                       -- 父项目，依赖管理
 
 #### 后端技术
 
-| 技术                 | 说明                | 官网                                                 |
-| -------------------- | ------------------- | ---------------------------------------------------- |
-| SpringBoot           | 容器+MVC框架        | https://spring.io/projects/spring-boot               |
-| SpringSecurity       | 认证和授权框架      | https://spring.io/projects/spring-security           |
-| MyBatis              | ORM框架             | http://www.mybatis.org/mybatis-3/zh/index.html       |
-| MyBatisGenerator     | 数据层代码生成      | http://www.mybatis.org/generator/index.html          |
-| PageHelper           | MyBatis物理分页插件 | http://git.oschina.net/free/Mybatis_PageHelper       |
-| Swagger-UI           | 文档生产工具        | https://github.com/swagger-api/swagger-ui            |
-| Hibernator-Validator | 验证框架            | http://hibernate.org/validator                       |
-| Elasticsearch        | 搜索引擎            | https://github.com/elastic/elasticsearch             |
-| RabbitMQ             | 消息队列            | https://www.rabbitmq.com/                            |
-| Redis                | 分布式缓存          | https://redis.io/                                    |
-| MongoDB              | NoSql数据库         | https://www.mongodb.com                              |
-| Docker               | 应用容器引擎        | https://www.docker.com                               |
-| Druid                | 数据库连接池        | https://github.com/alibaba/druid                     |
-| OSS                  | 对象存储            | https://github.com/aliyun/aliyun-oss-java-sdk        |
-| MinIO                | 对象存储            | https://github.com/minio/minio                       |
-| JWT                  | JWT登录支持         | https://github.com/jwtk/jjwt                         |
-| LogStash             | 日志收集工具        | https://github.com/logstash/logstash-logback-encoder |
-| Lombok               | 简化对象封装工具    | https://github.com/rzwitserloot/lombok               |
-| Jenkins              | 自动化部署工具      | https://github.com/jenkinsci/jenkins                 |
+| 技术                   | 说明                | 官网                                                 |
+| --------------------   | -------------------| ---------------------------------------------------- |
+| SpringBoot             | 容器+MVC框架        | https://spring.io/projects/spring-boot               |
+| SpringSecurity+Oauth2  | 认证和授权框架       | https://spring.io/projects/spring-security           |
+| MyBatis                | ORM框架             | http://www.mybatis.org/mybatis-3/zh/index.html       |         |
+| PageHelper             | MyBatis物理分页插件  | http://git.oschina.net/free/Mybatis_PageHelper       |          |
+| Hibernator-Validator   | 验证框架            | http://hibernate.org/validator                       |
+| Elasticsearch          | 搜索引擎            | https://github.com/elastic/elasticsearch             |
+| RabbitMQ               | 消息队列            | https://www.rabbitmq.com/                            |
+| Redis                  | 分布式缓存          | https://redis.io/                                    |
+| MongoDB                | NoSql数据库         | https://www.mongodb.com                              |
+| Docker                 | 应用容器引擎        | https://www.docker.com                               |
+| Druid                  | 数据库连接池         | https://github.com/alibaba/druid                     |
+| OSS                    | 对象存储            | https://github.com/aliyun/aliyun-oss-java-sdk        |                    |
+| JWT                    | JWT登录支持         | https://github.com/jwtk/jjwt                         |
+| LogStash               | 日志收集工具        | https://github.com/logstash/logstash-logback-encoder |
+| Lombok                 | 简化对象封装工具    | https://github.com/rzwitserloot/lombok               |
+| Jenkins                | 自动化部署工具      | https://github.com/jenkinsci/jenkins
+
 
 
 
