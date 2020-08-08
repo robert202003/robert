@@ -3,7 +3,7 @@
 [![Codecov](https://codecov.io/gh/alibaba/spring-cloud-alibaba/branch/master/graph/badge.svg)](https://codecov.io/gh/alibaba/spring-cloud-alibaba)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-小罗维护的一个项目。
+robert维护的一个项目，目前工作在深圳。
 
 有关英文文档，请参见[English document](https://github.com/yulo2020/robert/blob/master/README-en.md)
 
@@ -21,8 +21,7 @@ robert致力于为微服务开发提供一个脚手架。 该项目包括用于�
 * **服务链路追踪**：基于zipkin提供服务链路追踪，支持mysql持久化。
 * **消息驱动能力**：基于 Spring Cloud Stream 为微服务应用构建消息驱动能力。
 * **分布式唯一ID生成器**：分布式唯一ID生成器，增强版的雪花算法，高效唯一有规律，添加robert-id依赖即可使用。
-* **一键集成Redis和Mongo**：添加robert-redis和robert-mongo依赖即可集成。
-* **一键集成RabbitMQ和RocketMQ**：添加robert-stream依赖即可集成。
+* **公共包依赖**：集成了Redis，Mongo，RabbitMQ和RocketMQ，日志收集，添加相应的依赖即可使用。
 
 
 
@@ -32,19 +31,19 @@ robert                       -- 父项目，依赖管理
 │  ├─robert-auth-client      -- oauth2客户端依赖包
 │  ├─robert-auth-server      -- oauth2服务端[8050]
 │  ├─robert-model            -- 公共的model依赖，包括vo,dto和feign等
+│  ├─robert-common           -- 通用工程一级工程
+│  │  ├─robert-core          --核心基础包
+│  │  ├─robert-id            --分布式唯一ID生成器
+│  │  ├─robert-log-record    --日志收集工具包
+│  │  ├─robert-mongo         --mongo 集成，封装了很多mongo的操作
+│  │  ├─robert-redis         --redis 操作集成，支持集群模式，包括了分布式锁的封装
+│  │  ├─robert-stream        --stream 集成，集成RabbitMQ和RocketMQ
 │  ├─robert-docs             -- 项目文档
 │  ├─robert-gateway          -- 网关服务[9020]
-│  ├─robert-modules               -- 业务模块一级工程
+│  ├─robert-modules          -- 业务模块一级工程
 │  │  ├─robert-order-api         -- 订单服务[8030]
 │  │  ├─robert-user-api          -- 用户中心[8020]
 │  ├─robert-monitor          -- 监控中心
-│  ├─robert-naocos           -- 服务注册和配置中心
-│  ├─robert-common           -- 通用工程一级工程
-│  │  ├─robert-redis         --redis 集成，包括了分布式锁的封装
-│  │  ├─robert-core          --核心基础包
-│  │  ├─robert-id            --分布式唯一ID生成器
-│  │  ├─robert-mongo         --mongo 集成，封装了很多mongo的操作
-│  │  ├─robert-stream        --stream 集成，一键集成RabbitMQ和RocketMQ
 
 ```
 
