@@ -6,23 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="robert-auth-client" />
-        <module name="robert-monitor" />
-        <module name="robert-goods-api" />
-        <module name="robert-gateway" />
-        <module name="robert-id" />
-        <module name="robert-redis" />
-        <module name="robert-user-api" />
-        <module name="robert-stream" />
-        <module name="robert-mongo" />
-        <module name="robert-model" />
-        <module name="robert-core" />
-        <module name="robert-auth-server" />
         <module name="robert-docs" />
+        <module name="robert-redis" />
+        <module name="robert-stream" />
+        <module name="robert-auth-client" />
+        <module name="robert-log-record" />
+        <module name="robert-auth-server" />
+        <module name="robert-gateway" />
+        <module name="robert-monitor" />
+        <module name="robert-api-model" />
+        <module name="robert-mongo" />
+        <module name="robert-goods-api" />
+        <module name="robert-core" />
+        <module name="robert-id" />
+        <module name="robert-user-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="robert" target="1.8" />
+      <module name="robert-api-model" target="1.8" />
       <module name="robert-auth-client" target="1.8" />
       <module name="robert-auth-server" target="1.8" />
       <module name="robert-common" target="1.8" />
@@ -31,6 +33,7 @@
       <module name="robert-gateway" target="1.8" />
       <module name="robert-goods-api" target="1.8" />
       <module name="robert-id" target="1.8" />
+      <module name="robert-log-record" target="1.8" />
       <module name="robert-model" target="1.8" />
       <module name="robert-modules" target="1.8" />
       <module name="robert-mongo" target="1.8" />

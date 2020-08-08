@@ -17,6 +17,7 @@
         <module>robert-id</module>
         <module>robert-mongo</module>
         <module>robert-stream</module>
+        <module>robert-log-record</module>
     </modules>
 
 </project>
