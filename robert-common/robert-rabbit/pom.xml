@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>robert-stream</artifactId>
+    <artifactId>robert-rabbit</artifactId>
 
 
 </project>

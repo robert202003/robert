@@ -13,11 +13,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>robert-redis</module>
-        <module>robert-core</module>
         <module>robert-id</module>
         <module>robert-mongo</module>
-        <module>robert-stream</module>
-        <module>robert-log-record</module>
+        <module>robert-rabbit</module>
+        <module>robert-log</module>
     </modules>
 
 </project>

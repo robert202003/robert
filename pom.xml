@@ -12,6 +12,7 @@
         <module>robert-auth-client</module>
         <module>robert-auth-server</module>
         <module>robert-api-model</module>
+        <module>robert-core</module>
     </modules>
 
     <groupId>org.robert</groupId>

@@ -70,8 +70,8 @@
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>auth-client</artifactId>
+            <groupId>org.robert</groupId>
+            <artifactId>robert-auth-client</artifactId>
         </dependency>
     </dependencies>
 
