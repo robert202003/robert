@@ -1,6 +1,6 @@
 package org.robert.auth.server.mapper;
 
-import org.robert.model.OauthClientDetailsDTO;
+import org.robert.auth.server.model.OauthClientDetailsDTO;
 import org.robert.auth.server.model.SysUser;
 import org.apache.ibatis.annotations.Param;
 import org.robert.core.base.MyMapper;

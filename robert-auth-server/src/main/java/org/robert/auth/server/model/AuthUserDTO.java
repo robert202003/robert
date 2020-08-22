@@ -1,4 +1,4 @@
-package org.robert.model;
+package org.robert.auth.server.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;

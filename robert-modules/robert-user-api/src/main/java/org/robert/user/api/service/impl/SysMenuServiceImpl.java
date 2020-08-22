@@ -6,7 +6,7 @@ import org.robert.core.model.BuildTree;
 import org.robert.core.model.Tree;
 import org.robert.core.util.BeanUtils;
 import org.robert.core.util.StringUtils;
-import org.robert.model.dto.SysMenuDTO;
+import org.robert.auth.server.model.dto.SysMenuDTO;
 import org.robert.user.api.mapper.SysMenuMapper;
 import org.robert.user.api.mapper.SysMenuRoleMapper;
 import org.robert.user.api.entity.SysMenu;

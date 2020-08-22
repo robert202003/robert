@@ -7,7 +7,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan(basePackages = {"com.github.cloud.auth.mapper"})
+@MapperScan(basePackages = {"org.robert.auth.server.mapper"})
 public class AuthServerApplication {
 
     public static void main(String[] args) {

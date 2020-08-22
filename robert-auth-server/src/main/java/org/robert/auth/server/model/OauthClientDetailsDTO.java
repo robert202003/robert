@@ -1,4 +1,4 @@
-package org.robert.model;
+package org.robert.auth.server.model;
 
 import java.io.Serializable;
 
