@@ -45,6 +45,7 @@
         <lombok.version>1.18.10</lombok.version>
         <httpclient.version>4.5.3</httpclient.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
+        <hutool.version>4.5.10</hutool.version>
         <spring-boot-admin-client.version>2.1.6</spring-boot-admin-client.version>
         <spring-boot-admin-server.version>2.1.6</spring-boot-admin-server.version>
         <fastjson.version>1.2.60</fastjson.version>
@@ -163,6 +164,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-text</artifactId>
                 <version>${commons-text.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>

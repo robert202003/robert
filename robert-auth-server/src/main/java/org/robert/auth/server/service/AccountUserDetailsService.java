@@ -1,11 +1,11 @@
 package org.robert.auth.server.service;
 
+import cn.hutool.core.util.StrUtil;
+import org.robert.auth.server.enums.UserTypeEnum;
 import org.robert.auth.server.model.AuthUserDTO;
 import org.robert.auth.server.mapper.AuthMapper;
 import org.robert.auth.server.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
-import org.robert.core.enums.UserTypeEnum;
-import org.robert.core.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -44,7 +44,7 @@ public class AccountUserDetailsService implements UserDetailsService {
         if (!name.contains("|")) {
             user = authMapper.getUserByUserName(name);
         } else {
-            String[] account = StringUtils.split(name, "|");
+            String[] account = StrUtil.split(name, "|");
             String userName = account[0];
             String clientId = account[1];
             user = authMapper.getUserByUserNameAndAppId(userName, clientId);
@@ -76,7 +76,7 @@ public class AccountUserDetailsService implements UserDetailsService {
                 case PLATFORM:
                     perms = authMapper.listUserPermsByUid(userId);
                     perms.forEach(perm -> {
-                        if (StringUtils.isNotBlank(perm)) {
+                        if (StrUtil.isNotBlank(perm)) {
                             authorities.add(new SimpleGrantedAuthority(perm));
                         }
                     });
