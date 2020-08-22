@@ -7,7 +7,7 @@
         <module>robert-gateway</module>
         <module>robert-modules</module>
         <module>robert-monitor</module>
-        <module>robert-docs</module>
+        <module>document</module>
         <module>robert-common</module>
         <module>robert-auth-client</module>
         <module>robert-auth-server</module>
