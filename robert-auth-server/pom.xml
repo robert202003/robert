@@ -12,11 +12,11 @@
     <artifactId>robert-auth-server</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
+            <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
+            <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
         <dependency>
@@ -26,6 +26,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -61,19 +62,15 @@
             <artifactId>druid</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-        </dependency>
-        <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>4.5.10</version>
         </dependency>
-       <!-- <dependency>
+        <dependency>
             <groupId>org.robert</groupId>
             <artifactId>robert-auth-client</artifactId>
             <version>1.0.0</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <build>
