@@ -15,7 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @ComponentScan(basePackages = {"org.robert.*"})
 @MapperScan("org.robert.goods.api.mapper")
 @EnableFeignClients(basePackages = {"org.robert.*"})
-@EnableApolloConfig(value={"db.yml", "common.bootstrap"})
+//@EnableApolloConfig(value={"db.yml", "common.bootstrap"})
 @SpringBootApplication
 public class GoodsApiApplication {
 

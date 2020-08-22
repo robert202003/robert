@@ -2,7 +2,7 @@ server:
   port: 8020
 spring:
   application:
-    name: robert-user
+    name: robert-user-api
   main:
     allow-bean-definition-overriding: true
   cloud:
@@ -11,10 +11,10 @@ spring:
         file-extension: yml
         group: dev
         namespace: 3203f198-36cd-4bb3-9e7f-81d2e6c3eac8
-        server-addr: 192.168.216.1:8848
+        server-addr: 127.0.0.1:8848
         timeout: 5000
       discovery:
-        server-addr: 192.168.216.1:8848
+        server-addr: 127.0.0.1:8848
 
 security:
   oauth2:
