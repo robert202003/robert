@@ -79,7 +79,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
         // 自定义jwt生成token方式
         TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
-       // tokenEnhancerChain.setTokenEnhancers(Arrays.asList(myTokenEnhancer(), jwtAccessTokenConverter));
+        tokenEnhancerChain.setTokenEnhancers(Arrays.asList(myTokenEnhancer(), jwtAccessTokenConverter));
         endpoints.tokenEnhancer(tokenEnhancerChain);
 
         // 配置TokenServices参数
