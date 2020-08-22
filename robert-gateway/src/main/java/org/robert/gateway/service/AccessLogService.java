@@ -187,7 +187,7 @@ public class AccessLogService {
             Map<String, String> headers = response.getHeaders().toSingleValueMap();
             responseMap.put("responseUrl", requestPath);
             responseMap.put("requestId", requestId);
-            responseMap.put("responseTime", DateUtils.formatDate(LocalDateTime.now(), "yyyy-MM-dd HH:mm:sss"));
+            responseMap.put("responseTime", DateUtils.formatDate(new Date(), "yyyy-MM-dd HH:mm:sss"));
             responseMap.put("userInfo", jsonFormat(JSON.toJSONString(userMap)));
             responseMap.put("responseHeaders", jsonFormat(JSON.toJSONString(headers)));
             responseMap.put("serviceId", serviceId == null ? defaultServiceId : serviceId);

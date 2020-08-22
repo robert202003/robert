@@ -7,6 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -61,7 +62,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      * 得到当前日期字符串 格式（yyyy-MM-dd） pattern可以为："yyyy-MM-dd" "HH:mm:ss" "E"
      */
     public static String formatCurrentDate(String pattern) {
-        return DateFormatUtils.format(LocalDateTime.now(), pattern);
+        return DateFormatUtils.format(new Date(), pattern);
     }
 
     /**
@@ -94,7 +95,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      * @return
      */
     public static String getCurrentTimestampStr() {
-        return formatDate(LocalDateTime.now(), "yyyyMMddHHmmss");
+        return formatDate(new Date(), "yyyyMMddHHmmss");
     }
 
     /**
@@ -234,42 +235,42 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      * 得到当前时间字符串 格式（HH:mm:ss）
      */
     public static String formatTime() {
-        return formatDate(LocalDateTime.now(), "HH:mm:ss");
+        return formatDate(new Date(), "HH:mm:ss");
     }
 
     /**
      * 得到当前日期和时间字符串 格式（yyyy-MM-dd HH:mm:ss）
      */
     public static String formatCurrentDateTime() {
-        return formatDate(LocalDateTime.now(), "yyyy-MM-dd HH:mm:ss");
+        return formatDate(new Date(), "yyyy-MM-dd HH:mm:ss");
     }
 
     /**
      * 得到当前年份字符串 格式（yyyy）
      */
     public static String formatYear() {
-        return formatDate(LocalDateTime.now(), "yyyy");
+        return formatDate(new Date(), "yyyy");
     }
 
     /**
      * 得到当前月份字符串 格式（MM）
      */
     public static String formatMonth() {
-        return formatDate(LocalDateTime.now(), "MM");
+        return formatDate(new Date(), "MM");
     }
 
     /**
      * 得到当天字符串 格式（dd）
      */
     public static String formatDay() {
-        return formatDate(LocalDateTime.now(), "dd");
+        return formatDate(new Date(), "dd");
     }
 
     /**
      * 得到当前星期字符串 格式（E）星期几
      */
     public static String formatWeek() {
-        return formatDate(LocalDateTime.now(), "E");
+        return formatDate(new Date(), "E");
     }
 
     /**
@@ -443,12 +444,4 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
     }
 
 
-    public static void main(String[] args) {
-        System.out.println(formatDate(getBeforeDay(LocalDateTime.now()), "yyyy-MM-dd"));
-        System.out.println(formatDate(getBeforeWeek(LocalDateTime.now()), "yyyy-MM-dd"));
-        System.out.println(formatDate(getBeforeYear(LocalDateTime.now()), "yyyy-MM-dd"));
-        System.out.println(formatDate(getAfterDay(LocalDateTime.now()), "yyyy-MM-dd"));
-        System.out.println(formatDate(getAfterWeek(LocalDateTime.now()), "yyyy-MM-dd"));
-        System.out.println(formatDate(getAfterYear(LocalDateTime.now()), "yyyy-MM-dd"));
-    }
 }

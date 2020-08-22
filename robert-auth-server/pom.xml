@@ -64,11 +64,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.robert</groupId>
             <artifactId>robert-core</artifactId>
             <version>1.0.0</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.robert</groupId>
             <artifactId>robert-auth-client</artifactId>
