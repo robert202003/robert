@@ -1,5 +1,7 @@
 package org.robert.goods.api.config;
 
+import org.robert.core.exception.CustomAccessDeniedHandler;
+import org.robert.core.exception.CustomAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

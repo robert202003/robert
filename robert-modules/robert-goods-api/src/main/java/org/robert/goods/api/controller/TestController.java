@@ -1,4 +1,4 @@
-package org.robert.goods.controller;
+package org.robert.goods.api.controller;
 
 import org.robert.core.base.R;
 import org.springframework.web.bind.annotation.PostMapping;
