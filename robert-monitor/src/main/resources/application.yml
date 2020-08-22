@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: small-monitor
+    name: robert-monitor
   profiles:
     active: dev
   main:

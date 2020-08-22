@@ -2,7 +2,7 @@ server:
   port: 8050
 spring:
   application:
-    name: small-auth
+    name: robert-auth-server
   main:
     allow-bean-definition-overriding: true
   cloud:

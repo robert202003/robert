@@ -1,6 +1,6 @@
 spring:
   application:
-    name: small-monitor
+    name: robert-monitor
 server:
   port: 9040 #启动端口
 

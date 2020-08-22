@@ -1,15 +1,14 @@
 package org.robert.user.api.controller;
 
-import org.robert.core.annotation.PageQuery;
-import org.robert.core.context.RobertContextHolder;
-import org.robert.core.base.R;
-import org.robert.core.util.StringUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.robert.auth.server.model.dto.OauthTokenDTO;
 import org.robert.auth.server.model.dto.RefreshTokenDTO;
 import org.robert.auth.server.model.dto.SysUserDTO;
+import org.robert.core.annotation.PageQuery;
+import org.robert.core.base.R;
+import org.robert.core.context.RobertContextHolder;
 import org.robert.user.api.feign.GoodsFeignClient;
 import org.robert.user.api.service.SysUserService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -125,23 +124,5 @@ public class SysUserController {
         return R.ok();
     }
 
-    @DeleteMapping("delete/{userId}")
-    public R deleteUser(@PathVariable("userId") Long userId) {
-        return R.ok(userService.deleteUser(userId));
-    }
-
-    @PostMapping({"locked/{userId}/{flag}", "locked/{userId}"})
-    public R setLocked(@PathVariable("userId") Long userId, @PathVariable(required = false) String flag) {
-        boolean isLocked = false;
-        if (StringUtils.isNotBlank(flag)) {
-            isLocked = flag.equals("1");
-        } else {
-            SysUserDTO sysUser = userService.selectUserById(userId);
-            if (sysUser != null) {
-                isLocked = sysUser.getIsLocked().equals("1") ? false : true;
-            }
-        }
-        return R.ok(userService.setLocked(userId, isLocked));
-    }
 
 }

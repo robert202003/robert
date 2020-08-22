@@ -2,7 +2,7 @@ server:
   port: 8020
 spring:
   application:
-    name: small-user
+    name: robert-user
   main:
     allow-bean-definition-overriding: true
   cloud:

@@ -2,7 +2,7 @@ server:
   port: 8030
 spring:
   application:
-    name: small-goods
+    name: robert-goods
   profiles:
     active: dev
   main:
