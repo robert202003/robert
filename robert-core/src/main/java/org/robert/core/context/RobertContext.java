@@ -3,7 +3,7 @@ package org.robert.core.context;
 /**
  * 用户信息
  */
-public class RobotContext {
+public class RobertContext {
 
     private String userId;
 
@@ -17,7 +17,7 @@ public class RobotContext {
 
     private String userType;
 
-    public RobotContext(String userId, String appId, String orgId, String userName, String userType) {
+    public RobertContext(String userId, String appId, String orgId, String userName, String userType) {
         this.userId = userId;
        // this.language = language;
         this.appId = appId;

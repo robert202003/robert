@@ -1,6 +1,6 @@
 package org.robert.goods.controller;
 
-import com.github.cloud.core.base.R;
+import org.robert.core.base.R;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

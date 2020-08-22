@@ -1,4 +1,4 @@
-package com.github.cloud.goods.mapper;
+package org.robert.goods.api.mapper;
 
 public interface GoodsMapper {
 }

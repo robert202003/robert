@@ -1,6 +1,5 @@
-package org.robert.goods.config;
+package org.robert.goods.api.config;
 
-import com.github.cloud.core.config.DefaultWebMvcConfig;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration

@@ -9,7 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -92,7 +92,7 @@ public class SysUser implements Serializable {
      * 生日
      */
     @Column(name = "birth")
-    private Date birth;
+    private LocalDateTime birth;
 
     /**
      * 帐号状态（是否锁定 0正常 1停用）
@@ -104,7 +104,7 @@ public class SysUser implements Serializable {
      * 最后登陆时间
      */
     @Column(name = "last_login_date")
-    private Date lastLoginDate;
+    private LocalDateTime lastLoginDate;
 
     /**
      * '删除状态：0未删除，1已删除'
@@ -122,7 +122,7 @@ public class SysUser implements Serializable {
      * 创建时间
      */
     @Column(name = "create_time")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     /**
      * 更新者
@@ -134,7 +134,7 @@ public class SysUser implements Serializable {
      * 更新时间
      */
     @Column(name = "update_time")
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     /**
      * 备注

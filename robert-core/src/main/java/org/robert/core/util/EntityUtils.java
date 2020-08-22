@@ -1,8 +1,8 @@
 package org.robert.core.util;
 
-import org.robert.core.context.RobotContextHolder;
+import org.robert.core.context.RobertContextHolder;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 
 /**
@@ -17,18 +17,18 @@ public class EntityUtils {
      * @param entity 实体bean
      */
     public static <T> void onSaveOrUpdate(T entity) {
-        String userId = RobotContextHolder.getUserId();
+        String userId = RobertContextHolder.getUserId();
         // 默认属性
         String[] fields = null;
         // 默认值
         Object[] value = null;
         if (isPKNotNull(entity, "id")) {
             fields = new String[]{"updateBy", "updateTime"};
-            value = new Object[]{userId, new Date()};
+            value = new Object[]{userId, LocalDateTime.now()};
         } else {
             long id = new SnowflakeIdWorker(1, 1).nextId();
             fields = new String[]{"id", "createBy", "createTime", "updateBy", "updateTime"};
-            value = new Object[]{id, userId, new Date(), userId, new Date()};
+            value = new Object[]{id, userId, LocalDateTime.now(), userId, LocalDateTime.now()};
         }
         // 填充默认属性值
         setDefaultValues(entity, fields, value);

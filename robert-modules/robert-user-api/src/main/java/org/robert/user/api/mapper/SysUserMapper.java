@@ -1,8 +1,7 @@
 package org.robert.user.api.mapper;
 
 import org.robert.core.base.MyMapper;
-import org.robert.core.mapper.UserMapper;
-import org.robert.user.api.dto.SysUserDTO;
+import org.robert.model.dto.SysUserDTO;
 import org.robert.user.api.entity.SysUser;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
  *
  * @since 2019-11-18
  */
-public interface SysUserMapper extends MyMapper<SysUser>, UserMapper<SysUser> {
+public interface SysUserMapper extends MyMapper<SysUser> {
 
     /**
      * 根据条件分页查询用户对象

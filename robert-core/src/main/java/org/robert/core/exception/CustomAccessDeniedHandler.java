@@ -21,7 +21,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
         System.out.println(accessDeniedException.getMessage());
         ObjectMapper objectMapper = new ObjectMapper();
         Map<String, Object> map = new HashMap();
-        map.put("message", "没有访问权限");
+        map.put("msg", "没有访问权限");
         map.put("code", 401);
         response.setContentType("application/json;charset=UTF-8");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

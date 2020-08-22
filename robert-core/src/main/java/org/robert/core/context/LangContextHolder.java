@@ -3,7 +3,7 @@ package org.robert.core.context;
 /**
  * 多语言上下文信息类
  */
-public class LanguageContextHolder {
+public class LangContextHolder {
 
     private static final ThreadLocal<String> languageHolder = new ThreadLocal<>();
 

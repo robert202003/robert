@@ -20,7 +20,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
             throws ServletException {
         Map<String, Object> map = new HashMap();
         map.put("code", 401);
-        map.put("message", "token过期或者验证错误");
+        map.put("msg", "token过期或者验证错误");
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         try {

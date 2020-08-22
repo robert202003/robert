@@ -1,7 +1,5 @@
-package org.robert.goods.config;
+package org.robert.goods.api.config;
 
-import com.github.cloud.core.exception.CustomAccessDeniedHandler;
-import com.github.cloud.core.exception.CustomAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

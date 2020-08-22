@@ -17,6 +17,8 @@
         <module>robert-mongo</module>
         <module>robert-rabbit</module>
         <module>robert-log</module>
+        <module>robert-i18n</module>
+        <module>robert-elastics</module>
     </modules>
 
 </project>

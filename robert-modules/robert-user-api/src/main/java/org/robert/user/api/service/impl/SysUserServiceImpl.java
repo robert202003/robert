@@ -2,21 +2,23 @@ package org.robert.user.api.service.impl;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
 import org.robert.core.constant.RedisConstant;
-import org.robert.core.context.LanguageContextHolder;
-import org.robert.core.context.RobotContextHolder;
+import org.robert.core.context.LangContextHolder;
+import org.robert.core.context.RobertContextHolder;
 import org.robert.core.exception.ApiException;
 import org.robert.core.util.*;
-import org.robert.user.api.dto.OauthTokenDTO;
-import org.robert.user.api.dto.RefreshTokenDTO;
-import org.robert.user.api.dto.SysRoleDTO;
-import org.robert.user.api.dto.SysUserDTO;
-import org.robert.user.api.mapper.SysUserMapper;
-import org.robert.user.api.mapper.SysUserRoleMapper;
+import org.robert.model.dto.OauthTokenDTO;
+import org.robert.model.dto.RefreshTokenDTO;
+import org.robert.model.dto.SysRoleDTO;
+import org.robert.model.dto.SysUserDTO;
+import org.robert.model.dto.SysUserDTO;
 import org.robert.user.api.entity.SysUser;
 import org.robert.user.api.entity.SysUserRole;
+import org.robert.user.api.feign.OauthFeignClient;
+import org.robert.user.api.mapper.SysUserMapper;
+import org.robert.user.api.mapper.SysUserRoleMapper;
 import org.robert.user.api.service.SysUserService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -24,10 +26,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
-
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -42,7 +43,7 @@ import java.util.concurrent.TimeUnit;
 public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
-    private org.robert.user.api.api.feign.OauthFeignClient oauthFeign;
+    private OauthFeignClient oauthFeign;
 
     @Autowired
     private SysUserMapper sysUserMapper;
@@ -76,7 +77,6 @@ public class SysUserServiceImpl implements SysUserService {
                 access_token, Long.valueOf(expires_in), TimeUnit.SECONDS);
         //更新登录时间
         Long id = Long.valueOf(oauthToken.get("userId"));
-        this.updateLastLoginDate(id);
         return oauthToken;
     }
 
@@ -107,7 +107,7 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     @SentinelResource(value="userList")
     public List<SysUserDTO> selectUserList(SysUserDTO user) {
-        String language = LanguageContextHolder.getLanguage();
+        String language = LangContextHolder.getLanguage();
         log.info("LanguageContextHolder.getLanguage():" + language);
 
         String message = MessageUtils.get("robot.user.SysUserDTO.userName.error");
@@ -136,59 +136,23 @@ public class SysUserServiceImpl implements SysUserService {
     @Transactional
     @Override
     public void saveUser(SysUserDTO user) {
-        Long userId = Long.valueOf(RobotContextHolder.getUserId());
+        Long userId = Long.valueOf(RobertContextHolder.getUserId());
         SysUser sysUser;
         if (user.getUserId() == null) {
             user.setCreateBy(userId);
-            user.setCreateTime(new Date());
+            user.setCreateTime(LocalDateTime.now());
             user.setUpdateBy(userId);
-            user.setUpdateTime(new Date());
+            user.setUpdateTime(LocalDateTime.now());
             sysUser = this.insert(user);
         } else {
             user.setUpdateBy(userId);
-            user.setUpdateTime(new Date());
+            user.setUpdateTime(LocalDateTime.now());
             sysUser = this.update(user);
         }
         this.updateUserRoles(sysUser.getUserId(), user.getRoles());
     }
 
-    /***
-     * 根据用户ID 更新 ，登录时间
-     * @param userId
-     */
-    @Override
-    public boolean updateLastLoginDate(Long userId) {
-        SysUser sysUser = new SysUser();
-        sysUser.setUserId(userId);
-        return sysUserMapper.updateLastLoginDate(sysUser) > 0;
-    }
 
-    /***
-     * 根据用户ID设置是否锁定
-     * @param userId 用户ID
-     * @param isLocked  是否锁定
-     */
-    @Override
-    public boolean setLocked(Long userId, boolean isLocked) {
-        SysUser sysUser = new SysUser();
-        sysUser.setUserId(userId);
-        if (isLocked) {
-            return sysUserMapper.disable(sysUser) > 0;
-        } else {
-            return sysUserMapper.enable(sysUser) > 0;
-        }
-    }
-
-    /***
-     * 根据用户id删除用户，软删
-     * @param userId 用户ID
-     */
-    @Override
-    public boolean deleteUser(Long userId) {
-        SysUser sysUser = new SysUser();
-        sysUser.setUserId(userId);
-        return sysUserMapper.delFlag(sysUser) > 0;
-    }
 
     /**
      * 退出登录

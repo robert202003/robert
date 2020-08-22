@@ -83,7 +83,7 @@ public class SecurityHandler {
                 ResponseEntity.status(oAuth2Exception.getHttpErrorCode());
 
                 body.addAdditionalInformation("code", oAuth2Exception.getHttpErrorCode() + "");
-                response.getBody().addAdditionalInformation("message", oAuth2Exception.getMessage());
+                response.getBody().addAdditionalInformation("msg", oAuth2Exception.getMessage());
 
                 return new ResponseEntity<>(body, headers, response.getStatusCode());
             }

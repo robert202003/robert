@@ -1,12 +1,12 @@
 package org.robert.user.api.controller;
 
 import org.robert.core.annotation.PageQuery;
-import org.robert.core.context.RobotContextHolder;
+import org.robert.core.context.RobertContextHolder;
 import org.robert.core.base.R;
 import org.robert.core.util.StringUtils;
-import org.robert.user.api.dto.OauthTokenDTO;
-import org.robert.user.api.dto.RefreshTokenDTO;
-import org.robert.user.api.dto.SysUserDTO;
+import org.robert.model.dto.OauthTokenDTO;
+import org.robert.model.dto.RefreshTokenDTO;
+import org.robert.model.dto.SysUserDTO;
 import org.robert.user.api.feign.GoodsFeignClient;
 import org.robert.user.api.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
@@ -56,11 +56,11 @@ public class SysUserController {
 
 
     @GetMapping("info")
-    public R info(HttpServletRequest request){
-        Map<String,String> user= new HashMap<>();
+    public R info(HttpServletRequest request) {
+        Map<String, String> user = new HashMap<>();
 
-        user.put("name","罗文喜");
-        user.put("avatar","https://img20.360buyimg.com/popshop/jfs/t2824/34/4130238362/6532/3ab064e2/57aa8583N03118a8b.jpg");
+        user.put("name", "罗文喜");
+        user.put("avatar", "https://img20.360buyimg.com/popshop/jfs/t2824/34/4130238362/6532/3ab064e2/57aa8583N03118a8b.jpg");
         return R.ok(user);
     }
 
@@ -83,12 +83,13 @@ public class SysUserController {
 
     /**
      * 退出登录
+     *
      * @param token
      * @return
      */
     @PostMapping("logout")
     public R logout(@RequestParam String token) {
-       userService.logout(token);
+        userService.logout(token);
         return R.ok();
     }
 
@@ -99,12 +100,12 @@ public class SysUserController {
      */
     @PostMapping("list")
     @PageQuery
-    public R selectUserList(@RequestBody(required=false) SysUserDTO sysUserDTO, HttpServletRequest request) {
+    public R selectUserList(@RequestBody(required = false) SysUserDTO sysUserDTO, HttpServletRequest request) {
         Enumeration<String> headerNames = request.getHeaderNames();
-        String userId = RobotContextHolder.getUserId();
+        String userId = RobertContextHolder.getUserId();
         System.out.println(userId);
 
-       // R tree = versionFeign.tree();
+        // R tree = versionFeign.tree();
         return R.ok(userService.selectUserList(sysUserDTO));
     }
 
@@ -125,15 +126,15 @@ public class SysUserController {
     }
 
     @DeleteMapping("delete/{userId}")
-    public R deleteUser(@PathVariable("userId") Long userId){
+    public R deleteUser(@PathVariable("userId") Long userId) {
         return R.ok(userService.deleteUser(userId));
     }
 
-    @PostMapping({"locked/{userId}/{flag}","locked/{userId}"})
-    public R setLocked(@PathVariable("userId") Long userId,@PathVariable(required=false) String flag) {
+    @PostMapping({"locked/{userId}/{flag}", "locked/{userId}"})
+    public R setLocked(@PathVariable("userId") Long userId, @PathVariable(required = false) String flag) {
         boolean isLocked = false;
         if (StringUtils.isNotBlank(flag)) {
-            isLocked =flag.equals("1");
+            isLocked = flag.equals("1");
         } else {
             SysUserDTO sysUser = userService.selectUserById(userId);
             if (sysUser != null) {

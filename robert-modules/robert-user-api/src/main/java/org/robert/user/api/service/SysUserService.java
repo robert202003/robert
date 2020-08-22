@@ -1,14 +1,12 @@
 package org.robert.user.api.service;
 
-import org.robert.user.api.dto.OauthTokenDTO;
-
-import java.util.Map;
-
-import org.robert.user.api.dto.RefreshTokenDTO;
-import org.robert.user.api.dto.SysRoleDTO;
-import org.robert.user.api.dto.SysUserDTO;
+import org.robert.model.dto.OauthTokenDTO;
+import org.robert.model.dto.RefreshTokenDTO;
+import org.robert.model.dto.SysRoleDTO;
+import org.robert.model.dto.SysUserDTO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -56,25 +54,6 @@ public interface SysUserService {
      * @param user 传入参数
      */
     void saveUser(SysUserDTO user);
-    /***
-     * 根据用户ID 更新 ，登录时间
-     * @param userId 用户ID
-     */
-    boolean updateLastLoginDate(Long userId);
-
-    /***
-     * 根据用户ID设置是否锁定
-     * @param userId 用户ID
-     * @param isLocked  是否锁定
-     */
-    boolean setLocked(Long userId,boolean isLocked);
-
-    /***
-     * 根据用户id删除用户，软删
-     * @param userId 用户ID
-     */
-    boolean deleteUser(Long userId);
-
     /**
      * 退出登录
      * @param token

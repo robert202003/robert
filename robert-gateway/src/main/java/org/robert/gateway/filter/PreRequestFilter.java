@@ -11,7 +11,7 @@ import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -34,7 +34,7 @@ public class PreRequestFilter implements WebFilter, Ordered {
         //将现在的request 变成 change对象
         ServerWebExchange build = exchange.mutate().request(request).response(response).build();
         // 添加请求时间
-        build.getAttributes().put("requestTime", DateUtils.formatDate(new Date(),"yyyy-MM-dd HH:mm:sss"));
+        build.getAttributes().put("requestTime", DateUtils.formatDate(LocalDateTime.now(),"yyyy-MM-dd HH:mm:sss"));
         return chain.filter(build);
     }
 

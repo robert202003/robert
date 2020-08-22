@@ -1,6 +1,6 @@
 package org.robert.user.api.controller;
 
-import org.robert.core.context.RobotContextHolder;
+import org.robert.core.context.RobertContextHolder;
 import org.robert.core.base.R;
 import org.robert.core.model.Tree;
 import org.robert.user.api.dto.SysMenuDTO;
@@ -55,7 +55,7 @@ public class SysMenuController {
      */
     @PostMapping("getMenus")
     public R getMenus() {
-        Long userId = Long.valueOf(RobotContextHolder.getUserId());
+        Long userId = Long.valueOf(RobertContextHolder.getUserId());
         List<Tree<SysMenu>> trees = sysMenuService.listMenuTree(userId);
         return R.ok(trees);
     }

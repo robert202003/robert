@@ -1,6 +1,6 @@
 package org.robert.auth.server.service;
 
-import org.robert.auth.server.dto.AuthUserDTO;
+import org.robert.model.AuthUserDTO;
 import org.robert.auth.server.mapper.AuthMapper;
 import org.robert.auth.server.model.SysUser;
 import lombok.extern.slf4j.Slf4j;

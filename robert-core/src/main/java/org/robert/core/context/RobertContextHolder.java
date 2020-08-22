@@ -3,15 +3,15 @@ package org.robert.core.context;
 /**
  * 用户信息上下文信息
  */
-public class RobotContextHolder {
+public class RobertContextHolder {
 
-    private static final ThreadLocal<RobotContext> robotContext = new ThreadLocal<>();
+    private static final ThreadLocal<RobertContext> robotContext = new ThreadLocal<>();
 
-    public static void setRobotContext(RobotContext context) {
+    public static void setRobotContext(RobertContext context) {
         robotContext.set(context);
     }
 
-    public static RobotContext getRobotContext() {
+    public static RobertContext getRobotContext() {
 
         return robotContext.get();
     }

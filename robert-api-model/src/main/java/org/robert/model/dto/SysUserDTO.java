@@ -1,10 +1,10 @@
-package org.robert.auth.server.dto;
+package org.robert.model.dto;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -71,7 +71,7 @@ public class SysUserDTO {
     /**
      * 生日
      */
-    private Date birth;
+    private LocalDateTime birth;
 
     /**
      * 帐号状态（是否锁定 0正常 1停用）
@@ -81,7 +81,7 @@ public class SysUserDTO {
     /**
      * 最后登陆时间
      */
-    private Date lastLoginDate;
+    private LocalDateTime lastLoginDate;
 
     /**
      * '删除状态：0未删除，1已删除'
@@ -96,7 +96,7 @@ public class SysUserDTO {
     /**
      * 创建时间
      */
-    private Date createTime;
+    private LocalDateTime createTime;
 
     /**
      * 更新者
@@ -106,7 +106,7 @@ public class SysUserDTO {
     /**
      * 更新时间
      */
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     /**
      * 备注

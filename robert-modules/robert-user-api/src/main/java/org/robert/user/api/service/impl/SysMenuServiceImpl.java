@@ -1,12 +1,12 @@
 package org.robert.user.api.service.impl;
 
-import org.robert.core.context.RobotContextHolder;
+import org.robert.core.context.RobertContextHolder;
 import org.robert.core.exception.ApiException;
 import org.robert.core.model.BuildTree;
 import org.robert.core.model.Tree;
 import org.robert.core.util.BeanUtils;
 import org.robert.core.util.StringUtils;
-import org.robert.user.api.dto.SysMenuDTO;
+import org.robert.model.dto.SysMenuDTO;
 import org.robert.user.api.mapper.SysMenuMapper;
 import org.robert.user.api.mapper.SysMenuRoleMapper;
 import org.robert.user.api.entity.SysMenu;
@@ -14,6 +14,7 @@ import org.robert.user.api.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -129,16 +130,16 @@ public class SysMenuServiceImpl implements SysMenuService {
 
     @Override
     public boolean saveMenu(SysMenuDTO menu) {
-        Long userId = Long.valueOf(RobotContextHolder.getUserId());
+        Long userId = Long.valueOf(RobertContextHolder.getUserId());
         if (menu.getMenuId() == null) {
             menu.setCreateBy(userId);
-            menu.setCreateTime(new Date());
+            menu.setCreateTime(LocalDateTime.now());
             menu.setUpdateBy(userId);
-            menu.setUpdateTime(new Date());
+            menu.setUpdateTime(LocalDateTime.now());
             return this.insert(menu);
         } else {
             menu.setUpdateBy(userId);
-            menu.setUpdateTime(new Date());
+            menu.setUpdateTime(LocalDateTime.now());
             return this.update(menu);
         }
     }

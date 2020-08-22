@@ -126,6 +126,11 @@
             <artifactId>ip2region</artifactId>
             <version>1.7.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.robert</groupId>
+            <artifactId>robert-api-model</artifactId>
+            <version>1.0.1.RELEASE</version>
+        </dependency>
 
         <!-- 集成LCN分布式框架 -->
         <!--<dependency>

@@ -7,17 +7,17 @@ import java.util.HashMap;
  */
 public class R extends HashMap<String, Object> {
 
-    private static String MSG = "服务器发生错误";
+    private static String MSG = "服务器繁忙，请稍后重试";
 
     public R() {
         this.put("code", 200);
-        this.put("message", "成功");
+        this.put("msg", "成功");
         this.put("success", true);
     }
 
     public static R error() {
 
-        return error(500, "操作失败");
+        return error(500, MSG);
     }
 
     public static R error(String msg) {
@@ -37,7 +37,7 @@ public class R extends HashMap<String, Object> {
     public static R error(int statusCode, String msg, String errorMsg, Object data) {
         R r = new R();
         r.put("code", statusCode);
-        r.put("message", msg);
+        r.put("msg", msg);
         r.put("errorDetail", errorMsg);
         r.put("success", false);
         if (data != null) {
@@ -52,7 +52,7 @@ public class R extends HashMap<String, Object> {
 
     public static R ok(String msg) {
         R r = new R();
-        r.put("message", msg);
+        r.put("msg", msg);
         return r;
     }
 
@@ -66,7 +66,7 @@ public class R extends HashMap<String, Object> {
 
     public static R ok(String msg, Object data) {
         R r = new R();
-        r.put("message", msg);
+        r.put("msg", msg);
         if (data != null) {
             r.put("data", data);
         }
@@ -85,7 +85,7 @@ public class R extends HashMap<String, Object> {
     }
 
     public R msg(String message) {
-        super.put("message",message);
+        super.put("msg",message);
         return this;
     }
 

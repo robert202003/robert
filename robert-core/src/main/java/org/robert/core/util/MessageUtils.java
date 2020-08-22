@@ -1,6 +1,6 @@
 package org.robert.core.util;
 
-import org.robert.core.context.LanguageContextHolder;
+import org.robert.core.context.LangContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
@@ -40,7 +40,7 @@ public class MessageUtils {
     public static String get(String key, Object[] objects, String language) {
         try {
             if (language == null) {
-                language = LanguageContextHolder.getLanguage();
+                language = LangContextHolder.getLanguage();
                 language = language == null ? DEFAULT_LANGUAGE : language.replaceAll("-", "_");
             }
             return messageSource.getMessage(key, objects, new Locale(language));

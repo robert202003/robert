@@ -1,10 +1,9 @@
-package org.robert.auth.server.dto;
-
+package org.robert.model.dto;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 public class SysRoleDTO {
@@ -54,7 +53,7 @@ public class SysRoleDTO {
      * 创建时间
      */
     @JSONField(serialize = false)
-    private Date createTime;
+    private LocalDateTime createTime;
 
     /**
      * 更新者
@@ -66,7 +65,7 @@ public class SysRoleDTO {
      * 更新时间
      */
     @JSONField(serialize = false)
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     /**
      * 备注

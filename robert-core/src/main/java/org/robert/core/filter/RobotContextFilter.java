@@ -2,9 +2,9 @@ package org.robert.core.filter;
 
 import com.alibaba.fastjson.JSONObject;
 import org.robert.core.constant.SecurityConstants;
-import org.robert.core.context.LanguageContextHolder;
-import org.robert.core.context.RobotContext;
-import org.robert.core.context.RobotContextHolder;
+import org.robert.core.context.LangContextHolder;
+import org.robert.core.context.RobertContext;
+import org.robert.core.context.RobertContextHolder;
 import org.robert.core.util.JwtUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -23,7 +23,7 @@ public class RobotContextFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         String acceptLanguage = request.getHeader("Accept-Language");
-        LanguageContextHolder.setLanguage(acceptLanguage);
+        LangContextHolder.setLanguage(acceptLanguage);
         try {
             String authorization = request.getHeader(SecurityConstants.AUTHORIZATION);
             if (authorization != null) {
@@ -35,15 +35,15 @@ public class RobotContextFilter extends OncePerRequestFilter {
                 String userType = userJson.getString(SecurityConstants.USER_TYPE);
                 String orgId = userJson.getString(SecurityConstants.ORG_ID);
                 String userName = userJson.getString(SecurityConstants.USER_NAME);
-                RobotContext context = new RobotContext(userId, appId, orgId, userName, userType);
-                RobotContextHolder.setRobotContext(context);
+                RobertContext context = new RobertContext(userId, appId, orgId, userName, userType);
+                RobertContextHolder.setRobotContext(context);
             }
 
         } finally {
 
             filterChain.doFilter(request, response);
-            RobotContextHolder.clear();
-            LanguageContextHolder.clearLanguage();
+            RobertContextHolder.clear();
+            LangContextHolder.clearLanguage();
         }
 
 

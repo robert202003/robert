@@ -1,9 +1,9 @@
 package org.robert.core.autoconfigure;
 
+import lombok.extern.slf4j.Slf4j;
 import org.robert.core.exception.GlobalExceptionHandler;
 import org.robert.core.filter.XssFilter;
 import org.robert.core.util.SnowflakeIdWorker;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +22,7 @@ public class DefaultBeanAutoConfiguration {
     @Bean
     public FilterRegistrationBean XssFilter() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new XssFilter());
+
         log.info("XssFilter [{}]", filterRegistrationBean);
         return filterRegistrationBean;
     }

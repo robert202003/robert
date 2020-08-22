@@ -1,9 +1,9 @@
-package org.robert.auth.server.dto;
+package org.robert.model.dto;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 public class SysMenuDTO {
@@ -61,7 +61,7 @@ public class SysMenuDTO {
     /**
      * 创建时间
      */
-    private Date createTime;
+    private LocalDateTime createTime;
 
     /**
      * 更新者
@@ -71,7 +71,7 @@ public class SysMenuDTO {
     /**
      * 更新时间
      */
-    private Date updateTime;
+    private LocalDateTime updateTime;
     /**
      * 备注
      */
