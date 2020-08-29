@@ -35,7 +35,7 @@ public class ResourceSeverConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.tokenStore(tokenStore);
-        resources.resourceId("oauth2-resource").stateless(true);
+        resources.resourceId("robert-user-api-resource");
         resources.authenticationEntryPoint(new CustomAuthenticationEntryPoint())
                 .accessDeniedHandler(new CustomAccessDeniedHandler());
     }

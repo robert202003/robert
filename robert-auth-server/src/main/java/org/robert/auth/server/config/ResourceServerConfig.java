@@ -39,7 +39,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.tokenStore(tokenStore)
-                .stateless(true)
                 .authenticationEntryPoint(new CustomAuthenticationEntryPoint())
                // .expressionHandler(expressionHandler)
                 .accessDeniedHandler(new CustomAccessDeniedHandler());
