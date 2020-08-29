@@ -12,6 +12,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -63,7 +64,7 @@ public class AccountUserDetailsService implements UserDetailsService {
         List<Long> roles;
         List<String> perms;
 
-        UserTypeEnum userTypeEnum = UserTypeEnum.getUserTypeByKey(UserTypeEnum.class, userType);
+        /*UserTypeEnum userTypeEnum = UserTypeEnum.getUserTypeByKey(UserTypeEnum.class, userType);
         if (userTypeEnum != null) {
             switch (userTypeEnum) {
                 case CLIENT:
@@ -84,9 +85,11 @@ public class AccountUserDetailsService implements UserDetailsService {
                 default:
                     break;
             }
-        }
+        }*/
 
-        AuthUserDTO authUserDTO = new AuthUserDTO(userId, userName, userType, orgId, appId, password, authorities);
+        name  = userName;
+        String encodePassword = new BCryptPasswordEncoder().encode(password);
+        AuthUserDTO authUserDTO = new AuthUserDTO(userId, userName, userType, orgId, appId, encodePassword, authorities);
         log.info("当前登录的用户是：{},app_id 是：{}", userName, appId);
         return authUserDTO;
     }

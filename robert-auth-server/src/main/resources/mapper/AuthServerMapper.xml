@@ -4,7 +4,7 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="org.robert.auth.server.model.SysUser">
-        <id column="user_id" property="userId" />
+        <id column="id" property="userId" />
         <result column="org_id" property="orgId" />
         <result column="app_id" property="appId" />
         <result column="user_name" property="userName" />
