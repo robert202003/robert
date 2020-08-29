@@ -1,17 +1,16 @@
 package org.robert.user.api.service.impl;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.robert.auth.server.model.dto.OauthTokenDTO;
+import org.robert.auth.server.model.dto.RefreshTokenDTO;
+import org.robert.auth.server.model.dto.SysRoleDTO;
+import org.robert.auth.server.model.dto.SysUserDTO;
 import org.robert.core.constant.RedisConstant;
 import org.robert.core.context.LangContextHolder;
 import org.robert.core.context.RobertContextHolder;
 import org.robert.core.exception.ApiException;
 import org.robert.core.util.*;
-import org.robert.auth.server.model.dto.OauthTokenDTO;
-import org.robert.auth.server.model.dto.RefreshTokenDTO;
-import org.robert.auth.server.model.dto.SysRoleDTO;
-import org.robert.auth.server.model.dto.SysUserDTO;
 import org.robert.user.api.entity.SysUser;
 import org.robert.user.api.entity.SysUserRole;
 import org.robert.user.api.feign.OauthFeignClient;
@@ -24,8 +23,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -104,7 +103,7 @@ public class SysUserServiceImpl implements SysUserService {
      * @return
      */
     @Override
-    @SentinelResource(value="userList")
+   // @SentinelResource(value="userList")
     public List<SysUserDTO> selectUserList(SysUserDTO user) {
         String language = LangContextHolder.getLanguage();
         log.info("LanguageContextHolder.getLanguage():" + language);
