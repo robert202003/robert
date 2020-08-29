@@ -71,8 +71,8 @@ public class SysUserServiceImpl implements SysUserService {
         String access_token = oauthToken.get("access_token");
         String userId = oauthToken.get("userId");
         String expires_in = oauthToken.get("expires_in");
-        redisTemplate.opsForValue().set(RedisConstant.USER_TOKEN + userId,
-                access_token, Long.valueOf(expires_in), TimeUnit.SECONDS);
+       /* redisTemplate.opsForValue().set(RedisConstant.USER_TOKEN + userId,
+                access_token, Long.valueOf(expires_in), TimeUnit.SECONDS);*/
         //更新登录时间
         Long id = Long.valueOf(oauthToken.get("userId"));
         return oauthToken;
