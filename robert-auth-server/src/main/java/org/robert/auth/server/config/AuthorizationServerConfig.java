@@ -65,6 +65,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Bean
     public ClientDetailsService clientDetails() {
+
         return new JdbcClientDetailsService(dataSource);
     }
 
@@ -87,7 +88,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         tokenServices.setTokenStore(endpoints.getTokenStore());
         tokenServices.setSupportRefreshToken(true);
         // 设置上次RefreshToken是否还可以使用 默认为true
-        tokenServices.setReuseRefreshToken(false);
+        tokenServices.setReuseRefreshToken(true);
         tokenServices.setClientDetailsService(endpoints.getClientDetailsService());
         tokenServices.setTokenEnhancer(endpoints.getTokenEnhancer());
         tokenServices.setAccessTokenValiditySeconds( (int) TimeUnit.DAYS.toSeconds(30)); // 30天
@@ -108,5 +109,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .checkTokenAccess("permitAll()")
                 //让/auth/token支持client_id以及client_secret作登录认证
                 .allowFormAuthenticationForClients();
+    }
+
+    public static void main(String[] args) {
+        String encode = new BCryptPasswordEncoder().encode("123456");
+        System.out.println(encode);
     }
 }

@@ -3,7 +3,7 @@ package org.robert.auth.server.service;
 import cn.hutool.core.util.StrUtil;
 import org.robert.auth.server.enums.UserTypeEnum;
 import org.robert.auth.server.model.AuthUserDTO;
-import org.robert.auth.server.mapper.AuthMapper;
+import org.robert.auth.server.mapper.AuthServerMapper;
 import org.robert.auth.server.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ import java.util.Set;
 public class AccountUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private AuthMapper authMapper;
+    private AuthServerMapper authMapper;
 
     /**
      * 查询用户 支持多租户

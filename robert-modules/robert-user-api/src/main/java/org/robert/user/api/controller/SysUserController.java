@@ -1,16 +1,12 @@
 package org.robert.user.api.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.robert.auth.server.model.dto.OauthTokenDTO;
-import org.robert.auth.server.model.dto.RefreshTokenDTO;
 import org.robert.auth.server.model.dto.SysUserDTO;
 import org.robert.core.annotation.PageQuery;
 import org.robert.core.base.R;
 import org.robert.core.context.RobertContextHolder;
-import org.robert.user.api.feign.GoodsFeignClient;
 import org.robert.user.api.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,26 +29,6 @@ public class SysUserController {
 
     @Autowired
     private SysUserService userService;
-    @Autowired
-    private GoodsFeignClient versionFeign;
-
-
-    /**
-     * 登录接口，向认证授权中心获取token
-     *
-     * @param client
-     * @return
-     */
-    @PostMapping("login")
-    public R login(@Validated @RequestBody OauthTokenDTO client) {
-        try {
-            return R.ok(userService.login(client));
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
-        return R.error("账号或密码错误");
-    }
-
 
     @GetMapping("info")
     public R info(HttpServletRequest request) {
@@ -61,35 +37,6 @@ public class SysUserController {
         user.put("name", "罗文喜");
         user.put("avatar", "https://img20.360buyimg.com/popshop/jfs/t2824/34/4130238362/6532/3ab064e2/57aa8583N03118a8b.jpg");
         return R.ok(user);
-    }
-
-
-    /**
-     * 刷新token接口，向认证授权中心获取refresh_token
-     *
-     * @param client
-     * @return
-     */
-    @PostMapping("refreshToken")
-    public R refresh_token(@Validated @RequestBody RefreshTokenDTO client) {
-        try {
-            return R.ok(userService.refreshToken(client));
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
-        return R.error("刷新token失败");
-    }
-
-    /**
-     * 退出登录
-     *
-     * @param token
-     * @return
-     */
-    @PostMapping("logout")
-    public R logout(@RequestParam String token) {
-        userService.logout(token);
-        return R.ok();
     }
 
     /***

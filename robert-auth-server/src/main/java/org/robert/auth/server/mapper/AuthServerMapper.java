@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface AuthMapper  {
+public interface AuthServerMapper {
 
     SysUser getUserByUserName(String userName);
 

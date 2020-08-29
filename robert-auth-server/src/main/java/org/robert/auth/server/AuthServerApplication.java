@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
-@ComponentScan(basePackages = {"org.robert.*"})
+@ComponentScan(basePackages = {"org.robert.auth.*"})
 @EnableDiscoveryClient
 @MapperScan(basePackages = {"org.robert.auth.server.mapper"})
 @SpringBootApplication

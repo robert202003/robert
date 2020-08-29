@@ -31,7 +31,7 @@ public class SysUser implements Serializable {
      * 用户ID
      */
     @Id
-    @Column(name = "user_id")
+    @Column(name = "id")
     private Long userId;
 
     /**

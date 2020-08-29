@@ -41,7 +41,7 @@ import java.util.concurrent.TimeUnit;
 public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
-    private OauthFeignClient oauthFeign;
+    private OauthFeignClient oauthFeignClient;
 
     @Autowired
     private SysUserMapper sysUserMapper;
@@ -66,7 +66,7 @@ public class SysUserServiceImpl implements SysUserService {
         String username = client.getUsername();
         Map<String, Object> requestData = BeanUtils.beanToMap(client);
         requestData.put("username", username.concat("|").concat(client_id));
-        Map<String, String> oauthToken = oauthFeign.getOauthToken(requestData);
+        Map<String, String> oauthToken = oauthFeignClient.getOauthToken(requestData);
         oauthToken.remove("client_secret");
         String access_token = oauthToken.get("access_token");
         String userId = oauthToken.get("userId");
@@ -86,7 +86,7 @@ public class SysUserServiceImpl implements SysUserService {
      */
     @Override
     public Map<String, String> refreshToken(RefreshTokenDTO client) throws Exception {
-        Map<String, String> oauthToken = oauthFeign.getOauthToken(BeanUtils.beanToMap(client));
+        Map<String, String> oauthToken = oauthFeignClient.getOauthToken(BeanUtils.beanToMap(client));
         oauthToken.remove("client_secret");
         String access_token = oauthToken.get("access_token");
         String expires_in = oauthToken.get("expires_in");

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="AuthMapper">
+<mapper namespace="org.robert.auth.server.mapper.AuthServerMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="SysUser">
+    <resultMap id="BaseResultMap" type="org.robert.auth.server.model.SysUser">
         <id column="user_id" property="userId" />
         <result column="org_id" property="orgId" />
         <result column="app_id" property="appId" />
@@ -41,7 +41,7 @@
 
     <select id="getUserByUserName" resultMap="BaseResultMap" parameterType="java.lang.String">
         select
-        user_id,
+        id,
         user_name,
         password,
         user_type,
@@ -53,7 +53,7 @@
 
     <select id="getUserByUserNameAndAppId" resultMap="BaseResultMap">
         select
-        user_id,
+        id,
         user_name,
         password,
         user_type,
