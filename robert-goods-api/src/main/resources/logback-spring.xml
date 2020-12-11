@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds">
     <springProperty scope="context" name="appName" source="spring.application.names" defaultValue="robert-goods-api"  />
+    <springProperty scope="context" name="printConsole" source="log.console.print" defaultValue="true"  />
     <!-- 控制台设置 -->
     <contextName>logback</contextName>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
