@@ -14,10 +14,9 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableDiscoveryClient
 @EnableTransactionManagement
 @EnableAsync
-@ComponentScan(basePackages = {"org.robert.*"})
 @EnableFeignClients(basePackages = {"org.robert.*"})
 //@EnableApolloConfig(value={"db.yml", "common.bootstrap"})
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages={"org.robert.*"},exclude = {DataSourceAutoConfiguration.class})
 public class GoodsApiApplication {
 
     public static void main(String[] args) {
