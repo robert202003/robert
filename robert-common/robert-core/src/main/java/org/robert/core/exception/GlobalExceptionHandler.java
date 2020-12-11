@@ -1,7 +1,6 @@
 package org.robert.core.exception;
 
 import org.robert.core.base.R;
-import org.robert.core.util.MessageUtils;
 import org.robert.core.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;

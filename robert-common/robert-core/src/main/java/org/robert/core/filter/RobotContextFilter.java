@@ -2,7 +2,6 @@ package org.robert.core.filter;
 
 import com.alibaba.fastjson.JSONObject;
 import org.robert.core.constant.SecurityConstants;
-import org.robert.core.context.LangContextHolder;
 import org.robert.core.context.RobertContext;
 import org.robert.core.context.RobertContextHolder;
 import org.robert.core.util.JwtUtils;
