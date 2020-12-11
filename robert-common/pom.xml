@@ -19,6 +19,7 @@
         <module>robert-log</module>
         <module>robert-i18n</module>
         <module>robert-elastics</module>
+        <module>robert-core</module>
     </modules>
 
 </project>
