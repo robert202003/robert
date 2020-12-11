@@ -7,7 +7,6 @@ import org.robert.auth.server.model.dto.RefreshTokenDTO;
 import org.robert.auth.server.model.dto.SysRoleDTO;
 import org.robert.auth.server.model.dto.SysUserDTO;
 import org.robert.core.constant.RedisConstant;
-import org.robert.core.context.LangContextHolder;
 import org.robert.core.context.RobertContextHolder;
 import org.robert.core.exception.ApiException;
 import org.robert.core.util.*;
@@ -103,13 +102,7 @@ public class SysUserServiceImpl implements SysUserService {
      * @return
      */
     @Override
-   // @SentinelResource(value="userList")
     public List<SysUserDTO> selectUserList(SysUserDTO user) {
-        String language = LangContextHolder.getLanguage();
-        log.info("LanguageContextHolder.getLanguage():" + language);
-
-        String message = MessageUtils.get("robot.user.SysUserDTO.userName.error");
-        log.info(message);
         return sysUserMapper.selectUserList(user);
     }
 
