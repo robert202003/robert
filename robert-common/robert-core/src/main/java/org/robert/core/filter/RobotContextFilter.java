@@ -20,9 +20,6 @@ public class RobotContextFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-
-        String acceptLanguage = request.getHeader("Accept-Language");
-        LangContextHolder.setLanguage(acceptLanguage);
         try {
             String authorization = request.getHeader(SecurityConstants.AUTHORIZATION);
             if (authorization != null) {
@@ -42,7 +39,6 @@ public class RobotContextFilter extends OncePerRequestFilter {
 
             filterChain.doFilter(request, response);
             RobertContextHolder.clear();
-            LangContextHolder.clearLanguage();
         }
 
 

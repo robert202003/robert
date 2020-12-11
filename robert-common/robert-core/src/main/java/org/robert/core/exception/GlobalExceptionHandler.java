@@ -197,17 +197,4 @@ public class GlobalExceptionHandler {
         return buildBody(ex, 403, message);
     }
 
-    /**
-     * BeansException
-     * @param ex
-     * @param request
-     * @param response
-     * @return
-     */
-    @ExceptionHandler({UndeclaredThrowableException.class})
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public static R undeclaredThrowableException(Exception ex, HttpServletRequest request, HttpServletResponse response) {
-        String message = MessageUtils.get("robot.sentinel.global.error");
-        return buildBody(ex, 500, message);
-    }
 }
