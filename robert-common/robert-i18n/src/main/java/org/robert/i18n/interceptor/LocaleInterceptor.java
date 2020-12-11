@@ -1,4 +1,4 @@
-package org.robert.core.interceptor;
+package org.robert.i18n.interceptor;
 
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.servlet.LocaleResolver;

@@ -1,6 +1,6 @@
-package org.robert.core.interceptor;
+package org.robert.i18n.interceptor;
 
-import org.robert.core.context.LangContextHolder;
+import org.robert.i18n.context.LangContextHolder;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -12,8 +12,8 @@ public class LanguageInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String acceptLanguage = request.getHeader("Accept-Language");
-        String countryLanuge = request.getLocale().toString();
-        LangContextHolder.setLanguage(acceptLanguage);
+        String countryLanguage = request.getLocale().toString();
+        LangContextHolder.setLanguage(countryLanguage);
         return true;
     }
 
