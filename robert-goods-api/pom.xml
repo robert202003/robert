@@ -25,12 +25,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>simpleclient</artifactId>
-                    <groupId>io.prometheus</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -52,15 +46,10 @@
             <artifactId>xxl-job-core</artifactId>
             <version>${xxl.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-            <version>${yl-sharding-jdbc-spring-boot-starter.version}</version>
-        </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
@@ -81,10 +70,10 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -109,35 +98,6 @@
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.robert</groupId>
-            <artifactId>robert-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-registry-prometheus</artifactId>
-            <version>1.0.3</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>simpleclient</artifactId>
-                    <groupId>io.prometheus</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- 集成LCN分布式框架 -->
-        <!--<dependency>
-            <groupId>com.codingapi.txlcn</groupId>
-            <artifactId>txlcn-tc</artifactId>
-            <version>5.0.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.codingapi.txlcn</groupId>
-            <artifactId>txlcn-txmsg-netty</artifactId>
-            <version>5.0.2.RELEASE</version>
-        </dependency>-->
     </dependencies>
 
     <build>

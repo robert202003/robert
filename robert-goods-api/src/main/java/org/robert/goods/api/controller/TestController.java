@@ -1,6 +1,5 @@
 package org.robert.goods.api.controller;
 
-import org.robert.core.base.R;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,8 +12,8 @@ import java.util.Enumeration;
 public class TestController {
 
     @PostMapping("token")
-    public R tree(HttpServletRequest request) {
+    public Object tree(HttpServletRequest request) {
         Enumeration<String> headerNames = request.getHeaderNames();
-        return R.ok("version token");
+        return headerNames;
     }
 }

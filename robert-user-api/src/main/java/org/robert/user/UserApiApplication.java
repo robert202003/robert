@@ -10,7 +10,6 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"org.robert.*"})
-@MapperScan("org.robert.user.api.mapper")
 @EnableFeignClients(basePackages = {"org.robert.*"})
 @SpringBootApplication
 public class UserApiApplication {
