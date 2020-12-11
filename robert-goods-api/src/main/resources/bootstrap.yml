@@ -1,0 +1,29 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: robert-goods
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        group: DEFAULT_GROUP
+        namespace: f6a53a8e-0374-4e4f-9c57-ca87708a6071
+        server-addr: 172.16.1.111:8848
+        timeout: 5000
+      discovery:
+        server-addr: 172.16.1.111:8848
+        #namespace: f6a53a8e-0374-4e4f-9c57-ca87708a6071
+        #个人开发空间
+        namespace: 6e502512-0a2e-4dad-9282-d47b59eda28c
+
+security:
+  oauth2:
+    resource:
+      id: resource1
+      jwt:
+        key-uri: http://${spring.cloud.client.ip-address}:8050/oauth/token_key

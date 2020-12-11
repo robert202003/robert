@@ -32,7 +32,6 @@ robert                       -- 父项目，依赖管理
 │  ├─robert-api-model        -- model依赖包
 │  ├─robert-auth-client      -- oauth2客户端依赖包
 │  ├─robert-auth-server      -- oauth2服务端[8050]
-│  ├─robert-model            -- 公共的model依赖，包括vo,dto和feign等
 │  ├─robert-common           -- 通用工程一级工程
 │  │  ├─robert-core          --核心基础包
 │  │  ├─robert-id            --分布式唯一ID生成器

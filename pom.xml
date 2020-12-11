@@ -5,14 +5,14 @@
 
     <modules>
         <module>robert-gateway</module>
-        <module>robert-modules</module>
-        <module>robert-monitor</module>
         <module>document</module>
         <module>robert-common</module>
         <module>robert-auth-client</module>
         <module>robert-auth-server</module>
         <module>robert-api-model</module>
         <module>robert-core</module>
+        <module>robert-goods-api</module>
+        <module>robert-user-api</module>
     </modules>
 
     <groupId>org.robert</groupId>

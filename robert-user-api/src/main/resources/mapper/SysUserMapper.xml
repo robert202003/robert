@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.cloud.user.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysUser">
+        <id column="user_id" property="userId" />
+        <result column="app_id" property="appId" />
+        <result column="org_id" property="orgId" />
+        <result column="app_id" property="appId" />
+        <result column="user_name" property="userName" />
+        <result column="password" property="password" />
+        <result column="nick_name" property="nickName" />
+        <result column="user_type" property="userType" />
+        <result column="email" property="email" />
+        <result column="mobile" property="mobile" />
+        <result column="gender" property="gender" />
+        <result column="birth" property="birth" />
+        <result column="is_locked" property="isLocked" />
+        <result column="last_login_date" property="lastLoginDate" />
+        <result column="del_flag" property="delFlag" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 用户查询映射结果 -->
+    <resultMap id="UserDTOResultMap" type="com.github.cloud.user.dto.SysUserDTO">
+        <id column="user_id" property="userId" />
+        <result column="org_id" property="orgId" />
+        <result column="app_id" property="appId" />
+        <result column="org_short_name" property="orgName" />
+        <result column="user_name" property="userName" />
+        <result column="password" property="password" />
+        <result column="nick_name" property="nickName" />
+        <result column="user_type" property="userType" />
+        <result column="email" property="email" />
+        <result column="mobile" property="mobile" />
+        <result column="gender" property="gender" />
+        <result column="birth" property="birth" />
+        <result column="is_locked" property="isLocked" />
+        <result column="last_login_date" property="lastLoginDate" />
+        <result column="del_flag" property="delFlag" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+        <collection property="roles" column="user_id" select="com.github.cloud.user.mapper.SysRoleMapper.selectRolesByUserId"/>
+    </resultMap>
+    <!-- 查询用户列表 -->
+    <select id="selectUserList" parameterType="com.github.cloud.user.dto.SysUserDTO" resultMap="UserDTOResultMap">
+        SELECT u.*,o.org_short_name
+        FROM sys_user  u
+        LEFT JOIN sys_org o ON o.org_id=u.org_id
+        WHERE u.del_flag='0'
+        <if test="userName != null and userName != ''"><!-- 账号检索 -->
+            AND u.user_name like concat('%', #{userName}, '%')
+        </if>
+        <if test="nickName != null and nickName != ''"><!-- 昵称检索 -->
+            AND u.nick_name like concat('%', #{nickName}, '%')
+        </if>
+        <if test="isLocked != null and isLocked != ''"><!-- 是否锁定 -->
+            AND u.is_locked = #{isLocked}
+        </if>
+        <if test="orgId != null and orgId != ''"><!-- 机构锁定 -->
+            AND u.org_id = #{orgId}
+        </if>
+        <if test="userType != null and userType != ''"><!-- 用户类型 -->
+            AND u.user_type = #{userType}
+        </if>
+        <if test="params != null and params.beginTime != null and params.beginTime != ''"><!-- 最后登录时间开始时间检索 -->
+            AND date_format(u.last_login_date,'%y%m%d') &gt;= date_format(#{params.beginTime},'%y%m%d')
+        </if>
+        <if test="params != null and params.endTime != null and params.endTime != ''"><!-- 最后登录时间结束时间检索 -->
+            AND date_format(u.last_login_date,'%y%m%d') &lt;= date_format(#{params.endTime},'%y%m%d')
+        </if>
+        ORDER BY u.update_time DESC
+    </select>
+
+    <!-- 根据id查询用户 -->
+    <select id="selectUserById" parameterType="java.lang.Long" resultMap="UserDTOResultMap">
+        SELECT u.*,o.org_short_name
+        FROM sys_user  u
+        LEFT JOIN sys_org o ON o.org_id=u.org_id
+        WHERE u.user_id=#{userId}
+        AND u.del_flag = '0'
+    </select>
+</mapper>
