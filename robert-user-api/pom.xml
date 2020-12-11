@@ -41,6 +41,10 @@
             <artifactId>orika-core</artifactId>
             <version>${orika.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
         <!--定时任务-->
         <dependency>
             <groupId>com.xuxueli</groupId>
@@ -124,18 +128,6 @@
             <artifactId>robert-api-model</artifactId>
             <version>1.0.1.RELEASE</version>
         </dependency>
-
-        <!-- 集成LCN分布式框架 -->
-        <!--<dependency>
-            <groupId>com.codingapi.txlcn</groupId>
-            <artifactId>txlcn-tc</artifactId>
-            <version>5.0.2.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.codingapi.txlcn</groupId>
-            <artifactId>txlcn-txmsg-netty</artifactId>
-            <version>5.0.2.RELEASE</version>
-        </dependency>-->
     </dependencies>
 
     <build>

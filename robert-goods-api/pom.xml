@@ -25,6 +25,12 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>simpleclient</artifactId>
+                    <groupId>io.prometheus</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -100,9 +106,10 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.robert</groupId>
             <artifactId>robert-core</artifactId>
@@ -113,6 +120,12 @@
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
             <version>1.0.3</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>simpleclient</artifactId>
+                    <groupId>io.prometheus</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- 集成LCN分布式框架 -->
         <!--<dependency>

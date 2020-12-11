@@ -54,7 +54,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.8.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-context:2.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-context:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.ctrip.framework.apollo:apollo-client:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.ctrip.framework.apollo:apollo-core:1.4.0" level="project" />

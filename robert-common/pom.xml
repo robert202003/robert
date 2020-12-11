@@ -14,7 +14,6 @@
     <modules>
         <module>robert-redis</module>
         <module>robert-id</module>
-        <module>robert-mongo</module>
         <module>robert-rabbit</module>
         <module>robert-log</module>
         <module>robert-i18n</module>
