@@ -3,7 +3,7 @@ package org.robert.auth.server.service;
 import cn.hutool.core.util.StrUtil;
 import org.robert.auth.server.dto.AuthUserDTO;
 import org.robert.auth.server.mapper.AuthServerMapper;
-import org.robert.model.SysUser;
+import org.robert.auth.server.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

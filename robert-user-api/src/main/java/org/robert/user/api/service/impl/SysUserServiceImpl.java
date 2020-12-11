@@ -2,10 +2,10 @@ package org.robert.user.api.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
-import org.robert.model.dto.OauthTokenDTO;
-import org.robert.model.dto.RefreshTokenDTO;
-import org.robert.model.dto.SysRoleDTO;
-import org.robert.model.dto.SysUserDTO;
+import org.robert.auth.server.model.dto.OauthTokenDTO;
+import org.robert.auth.server.model.dto.RefreshTokenDTO;
+import org.robert.auth.server.model.dto.SysRoleDTO;
+import org.robert.auth.server.model.dto.SysUserDTO;
 import org.robert.core.constant.RedisConstant;
 import org.robert.core.context.LangContextHolder;
 import org.robert.core.context.RobertContextHolder;

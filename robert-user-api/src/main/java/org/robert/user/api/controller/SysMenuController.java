@@ -1,6 +1,6 @@
 package org.robert.user.api.controller;
 
-import org.robert.model.dto.SysMenuDTO;
+import org.robert.auth.server.model.dto.SysMenuDTO;
 import org.robert.core.context.RobertContextHolder;
 import org.robert.core.base.R;
 import org.robert.core.model.Tree;
