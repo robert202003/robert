@@ -103,21 +103,6 @@
         </filter>
     </appender>
 
-    <logger name="com.yl.log.RequestLogFilter" additivity="false">
-        <level value="INFO" />
-        <appender-ref ref="tracelogAppender" />
-    </logger>
-    <!--设置mongodb的集群日志级别-->
-    <logger name="org.mongodb.driver.cluster" additivity="false">
-        <level value="warn" />
-        <appender-ref ref="warnAppender"/>
-    </logger>
-    <!--设置mongodb的连接日志级别-->
-    <logger name="org.mongodb.driver.connection" additivity="false">
-        <level value="warn" />
-        <appender-ref ref="warnAppender"/>
-    </logger>
-
 
     <!--myibatis log configure-->
     <logger name="com.apache.ibatis" level="TRACE"/>

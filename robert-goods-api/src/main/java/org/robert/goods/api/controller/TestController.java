@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
 @RestController
-@RequestMapping("/api/test/")
+@RequestMapping("/test/")
 public class TestController {
 
     @PostMapping("token")
