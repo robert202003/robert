@@ -10,7 +10,6 @@
         <module>robert-auth-client</module>
         <module>robert-auth-server</module>
         <module>robert-api-model</module>
-        <module>robert-core</module>
         <module>robert-goods-api</module>
         <module>robert-user-api</module>
     </modules>
@@ -67,8 +66,7 @@
     <developers>
         <developer>
             <id>luo</id>
-            <name>wenxi</name>
-            <email>632395785@qq.com</email>
+            <name>robert</name>
         </developer>
     </developers>
 

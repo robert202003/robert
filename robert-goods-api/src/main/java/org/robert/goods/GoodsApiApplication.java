@@ -9,7 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import tk.mybatis.spring.annotation.MapperScan;
 
-
 @EnableDiscoveryClient
 @EnableTransactionManagement
 @ComponentScan(basePackages = {"org.robert.*"})
