@@ -17,6 +17,7 @@ import java.util.List;
 
 @Configuration
 public class GlobalExceptionConfig {
+
     @Autowired
     private AccessLogService accessLogService;
 
