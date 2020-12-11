@@ -1,7 +1,7 @@
 package org.robert.user.api.service;
 
 import org.robert.core.model.Tree;
-import org.robert.auth.server.model.dto.SysMenuDTO;
+import org.robert.model.dto.SysMenuDTO;
 import org.robert.user.api.entity.SysMenu;
 
 import java.util.List;

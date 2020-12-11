@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-robert维护的一个项目，目前工作在深圳。
+个人维护的一个项目，外号robert，目前工作在深圳。
 
 有关英文文档，请参见[English document](https://github.com/yulo2020/robert/blob/master/README-en.md)
 
@@ -29,22 +29,22 @@ robert致力于为微服务开发提供一个脚手架。 该项目包括用于�
 ## 模块说明
 ```lua
 robert                       -- 父项目，依赖管理
+│  ├─document                -- 文档
 │  ├─robert-api-model        -- model依赖包
 │  ├─robert-auth-client      -- oauth2客户端依赖包
 │  ├─robert-auth-server      -- oauth2服务端[8050]
 │  ├─robert-common           -- 通用工程一级工程
 │  │  ├─robert-core          --核心基础包
+│  │  ├─robert-elastics      --elasticsearch
 │  │  ├─robert-id            --分布式唯一ID生成器
 │  │  ├─robert-log-record    --日志收集工具包
 │  │  ├─robert-mongo         --mongo 集成，封装了很多mongo的操作
 │  │  ├─robert-redis         --redis 操作集成，支持集群模式，包括了分布式锁的封装
-│  │  ├─robert-stream        --stream 集成，集成RabbitMQ和RocketMQ
+│  │  ├─robert-rabbit        --集成RabbitMQ
 │  ├─robert-docs             -- 项目文档
 │  ├─robert-gateway          -- 网关服务[9020]
-│  ├─robert-modules          -- 业务模块一级工程
-│  │  ├─robert-order-api         -- 订单服务[8030]
-│  │  ├─robert-user-api          -- 用户中心[8020]
-│  ├─robert-monitor          -- 监控中心
+│  ├─robert-order-api         -- 订单服务[8030]
+│  ├─robert-user-api          -- 用户中心[8020]
 
 ```
 

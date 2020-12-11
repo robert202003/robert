@@ -1,7 +1,7 @@
 package org.robert.auth.server.config;
 
 import org.robert.auth.server.constant.SecurityConstants;
-import org.robert.auth.server.model.AuthUserDTO;
+import org.robert.auth.server.dto.AuthUserDTO;
 import org.robert.auth.server.service.AccountUserDetailsService;
 import org.robert.auth.server.util.SpringContextHolder;
 import org.springframework.security.core.Authentication;

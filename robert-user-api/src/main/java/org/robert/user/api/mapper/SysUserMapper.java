@@ -1,7 +1,7 @@
 package org.robert.user.api.mapper;
 
 import org.robert.core.base.MyMapper;
-import org.robert.auth.server.model.dto.SysUserDTO;
+import org.robert.model.dto.SysUserDTO;
 import org.robert.user.api.entity.SysUser;
 
 import java.util.List;

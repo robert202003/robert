@@ -1,14 +1,12 @@
 package org.robert.auth.server.service;
 
 import cn.hutool.core.util.StrUtil;
-import org.robert.auth.server.enums.UserTypeEnum;
-import org.robert.auth.server.model.AuthUserDTO;
+import org.robert.auth.server.dto.AuthUserDTO;
 import org.robert.auth.server.mapper.AuthServerMapper;
-import org.robert.auth.server.model.SysUser;
+import org.robert.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
