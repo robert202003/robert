@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @RefreshScope
 public class OssConfigBean {
 
-    public static String endpoint = "http://oss-cn-hangzhou.aliyuncs.com";
+    private String endpoint;
 
     private  String accessKeyId;
 
@@ -17,6 +17,13 @@ public class OssConfigBean {
 
     private  String bucketName;
 
+    public String getEndpoint() {
+        return endpoint;
+    }
+
+    public void setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+    }
     public String getAccessKeyId() {
         return accessKeyId;
     }

@@ -21,7 +21,7 @@ import java.io.IOException;
 public class FileServiceImpl implements FileService {
 
     @Autowired
-    private OssConfigBean ossConfigBean;
+    private OssConfigBean configBean;
 
     @Override
     public String upload(String applicationName, String moduleName, MultipartFile file) {
@@ -29,10 +29,10 @@ public class FileServiceImpl implements FileService {
         PutObjectResult putObject = null;
         try {
             bytes = file.getBytes();
-            OSS ossClient = new OSSClientBuilder().build(OssConfigBean.endpoint,
-                    ossConfigBean.getAccessKeyId(), ossConfigBean.getAccessKeySecret());
+            OSS ossClient = new OSSClientBuilder().build(configBean.getEndpoint(),
+                    configBean.getAccessKeyId(), configBean.getAccessKeySecret());
 
-            putObject = ossClient.putObject(ossConfigBean.getBucketName(),
+            putObject = ossClient.putObject(configBean.getBucketName(),
                     file.getOriginalFilename(), new ByteArrayInputStream(bytes));
             log.info(JSON.toJSONString(putObject));
             ossClient.shutdown();
