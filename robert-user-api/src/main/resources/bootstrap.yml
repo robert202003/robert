@@ -12,8 +12,8 @@ spring:
     druid:
       initial-size: 5
       min-idle: 5
-      max-active: 20
-      max-wait: 60000
+      max-active: 200
+      max-wait: 10000
       #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
       time-between-eviction-runs-millis: 60000
       # 配置一个连接在池中最小生存的时间，单位是毫秒
