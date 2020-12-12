@@ -1,10 +1,10 @@
 package org.robert.user.api.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.robert.auth.server.model.dto.SysUserDTO;
 import org.robert.core.annotation.PageQuery;
 import org.robert.core.base.R;
 import org.robert.core.context.RobertContextHolder;
+import org.robert.model.dto.SysUserDTO;
 import org.robert.user.api.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,9 +1,9 @@
 package org.robert.user.api.service;
 
-import org.robert.auth.server.model.dto.OauthTokenDTO;
-import org.robert.auth.server.model.dto.RefreshTokenDTO;
-import org.robert.auth.server.model.dto.SysRoleDTO;
-import org.robert.auth.server.model.dto.SysUserDTO;
+import org.robert.model.dto.OauthTokenDTO;
+import org.robert.model.dto.RefreshTokenDTO;
+import org.robert.model.dto.SysRoleDTO;
+import org.robert.model.dto.SysUserDTO;
 
 import java.util.List;
 import java.util.Map;

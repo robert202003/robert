@@ -1,9 +1,9 @@
 package org.robert.user.api.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.robert.auth.server.model.dto.OauthTokenDTO;
-import org.robert.auth.server.model.dto.RefreshTokenDTO;
 import org.robert.core.base.R;
+import org.robert.model.dto.OauthTokenDTO;
+import org.robert.model.dto.RefreshTokenDTO;
 import org.robert.user.api.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
