@@ -13,6 +13,7 @@
         <module>robert-goods-api</module>
         <module>robert-user-api</module>
         <module>robert-order-api</module>
+        <module>robert-file-api</module>
     </modules>
 
     <groupId>org.robert</groupId>
