@@ -27,3 +27,26 @@ security:
       id: resource1
       jwt:
         key-uri: http://${spring.cloud.client.ip-address}:8050/oauth/token_key
+
+
+
+    stream:
+      bindings:
+        #-----------------------------------------------------生产者--------------------------------------------------------------------------------
+        mq_goods_add_input: #商品添加
+          destination: collection-order
+          binder: mq-goods
+        #------------------------------------------------------- 上方生产者-----黄金分割线------下方消费者----------------------------------------------------------------------
+
+      defaultBinder: mq-goods
+      binders:
+        mq-goods:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
