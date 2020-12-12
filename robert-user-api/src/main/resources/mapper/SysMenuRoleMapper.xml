@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.cloud.user.mapper.SysMenuRoleMapper">
+<mapper namespace="org.robert.user.api.mapper.SysMenuRoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysMenuRole">
+    <resultMap id="BaseResultMap" type="org.robert.user.api.model.SysMenuRole">
         <id column="role_menu_id" property="roleMenuId" />
         <id column="role_id" property="roleId" />
         <result column="menu_id" property="menuId" />

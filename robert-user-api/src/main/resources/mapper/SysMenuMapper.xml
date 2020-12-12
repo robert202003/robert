@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.cloud.user.mapper.SysMenuMapper">
+<mapper namespace="org.robert.user.api.mapper.SysMenuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysMenu">
+    <resultMap id="BaseResultMap" type="org.robert.user.api.entity.SysMenu">
         <id column="menu_id" property="menuId" />
-        <result column="parent_id" property="parentId" />
         <result column="menu_name" property="menuName" />
+        <result column="parent_id" property="parentId" />
         <result column="menu_sort" property="menuSort" />
         <result column="menu_type" property="menuType" />
         <result column="url" property="url" />
@@ -22,9 +22,9 @@
 
     <select id="listMenuByUserId" resultType="SysMenu">
         SELECT DISTINCT
-            m.menu_id,
-            parent_id,
+            menu_id,
             menu_name,
+            parent_id,
             url,
             perms,
             menu_type,
@@ -46,7 +46,7 @@
   </select>
 
 
-    <select id="listUserPermsByUid" resultType="string">
+    <select id="listUserPermsByUid" resultType="java.lang.String">
 		SELECT DISTINCT
 		m.perms
 		FROM

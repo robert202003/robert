@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.cloud.user.mapper.SysUserMapper">
+<mapper namespace="org.robert.user.api.mapper.SysUserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysUser">
+    <resultMap id="BaseResultMap" type="org.robert.user.api.model.SysUser">
         <id column="user_id" property="userId" />
         <result column="app_id" property="appId" />
         <result column="org_id" property="orgId" />
@@ -27,7 +27,7 @@
     </resultMap>
 
     <!-- 用户查询映射结果 -->
-    <resultMap id="UserDTOResultMap" type="com.github.cloud.user.dto.SysUserDTO">
+    <resultMap id="UserDTOResultMap" type="org.robert.user.api.dto.SysUserDTO">
         <id column="user_id" property="userId" />
         <result column="org_id" property="orgId" />
         <result column="app_id" property="appId" />
@@ -48,10 +48,10 @@
         <result column="update_by" property="updateBy" />
         <result column="update_time" property="updateTime" />
         <result column="remark" property="remark" />
-        <collection property="roles" column="user_id" select="com.github.cloud.user.mapper.SysRoleMapper.selectRolesByUserId"/>
+        <collection property="roles" column="user_id" select="org.robert.user.api.mapper.SysRoleMapper.selectRolesByUserId"/>
     </resultMap>
     <!-- 查询用户列表 -->
-    <select id="selectUserList" parameterType="com.github.cloud.user.dto.SysUserDTO" resultMap="UserDTOResultMap">
+    <select id="selectUserList" parameterType="org.robert.user.api.dto.SysUserDTO" resultMap="UserDTOResultMap">
         SELECT u.*,o.org_short_name
         FROM sys_user  u
         LEFT JOIN sys_org o ON o.org_id=u.org_id

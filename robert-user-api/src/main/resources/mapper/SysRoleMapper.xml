@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.cloud.user.mapper.SysRoleMapper">
+<mapper namespace="org.robert.user.api.mapper.SysRoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.cloud.user.model.SysRole">
+    <resultMap id="BaseResultMap" type="org.robert.user.api.model.SysRole">
         <id column="role_id" property="roleId" />
         <result column="role_name" property="roleName" />
         <result column="role_name_en" property="roleNameEn" />
@@ -18,7 +18,7 @@
         <result column="remark" property="remark" />
     </resultMap>
     <!-- 通用查询映射结果 -->
-    <resultMap id="SysRoleDTOResultMap" type="com.github.cloud.user.dto.SysRoleDTO">
+    <resultMap id="SysRoleDTOResultMap" type="org.robert.user.api.dto.SysRoleDTO">
         <id column="role_id" property="roleId" />
         <result column="role_name" property="roleName" />
         <result column="role_name_en" property="roleNameEn" />
