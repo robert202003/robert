@@ -1,4 +1,4 @@
-package org.robert.auth.server.model.dto;
+package org.robert.model.dto;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
