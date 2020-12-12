@@ -6,4 +6,6 @@ public interface FileService {
 
   String upload(String applicationName, String moduleName, MultipartFile file);
 
+  String getSignUrl(String fileName);
+
 }
