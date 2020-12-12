@@ -1,7 +1,7 @@
 package org.robert.file.api.controller;
 
-import org.robert.core.base.R;
 import org.robert.file.api.service.FileService;
+import org.robert.file.api.vo.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @RequestMapping(value = "/file")
 @Validated
-public class WebFileController {
+public class FileController {
 
     @Autowired
     private FileService fileService;

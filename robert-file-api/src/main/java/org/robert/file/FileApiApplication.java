@@ -1,21 +1,16 @@
-package org.robert.user;
+package org.robert.file;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
-import tk.mybatis.spring.annotation.MapperScan;
 
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"org.robert.*"})
-@MapperScan("org.robert.order.api.mapper")
-@EnableFeignClients(basePackages = {"org.robert.*"})
 @SpringBootApplication
-public class UserApiApplication {
+public class FileApiApplication {
     public static void main(String[] args) {
 
-        SpringApplication.run(UserApiApplication.class, args);
+        SpringApplication.run(FileApiApplication.class, args);
     }
 }
