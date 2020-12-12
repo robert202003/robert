@@ -1,24 +1,32 @@
 package org.robert.goods.api.controller;
 
+import org.robert.goods.api.message.UserMessage;
+import org.robert.goods.api.stream.MessageProducer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Enumeration;
 
 @RestController
 @RequestMapping("/test/")
 public class TestController {
 
+    @Autowired
+    private MessageProducer messageProducer;
+
     @PostMapping("token")
     public Object tree(HttpServletRequest request) {
-        return "fa";
+        return "token";
     }
 
-    @PostConstruct
-    public void init() {
-        System.out.println("aa");
+
+    @PostMapping(value = "sendUserMessage")
+    public Object message(@RequestBody UserMessage message) {
+        messageProducer.sendMessage(message);
+        return message;
     }
+
 }

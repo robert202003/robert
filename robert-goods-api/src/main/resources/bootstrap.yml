@@ -20,24 +20,17 @@ spring:
         #namespace: f6a53a8e-0374-4e4f-9c57-ca87708a6071
         #个人开发空间
         namespace: 6e502512-0a2e-4dad-9282-d47b59eda28c
-
-security:
-  oauth2:
-    resource:
-      id: resource1
-      jwt:
-        key-uri: http://${spring.cloud.client.ip-address}:8050/oauth/token_key
-
-
-
     stream:
       bindings:
         #-----------------------------------------------------生产者--------------------------------------------------------------------------------
-        mq_goods_add_input: #商品添加
-          destination: collection-order
+        robert_mq_goods_add_output: #商品添加
+          destination: robert_goods_add
           binder: mq-goods
-        #------------------------------------------------------- 上方生产者-----黄金分割线------下方消费者----------------------------------------------------------------------
-
+        #-------------------------------------------------- 上方生产者-----黄金分割线------下方消费者----------------------------------------------------------------------
+        robert_mq_goods_add_input: # --消费者
+          destination: robert_goods_add
+          binder: mq-goods
+          group: goods_add_group
       defaultBinder: mq-goods
       binders:
         mq-goods:
@@ -50,3 +43,14 @@ security:
                 username: guest
                 password: guest
                 virtual-host: /
+
+security:
+  oauth2:
+    resource:
+      id: resource1
+      jwt:
+        key-uri: http://${spring.cloud.client.ip-address}:8050/oauth/token_key
+
+
+
+
