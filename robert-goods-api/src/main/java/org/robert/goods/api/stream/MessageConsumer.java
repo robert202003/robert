@@ -20,13 +20,7 @@ public class MessageConsumer {
     public void userMessage(@Payload Message<UserMessage> message) {
         UserMessage userMessage = message.getPayload();
 
-        log.info("收到用户信息：{}", JSON.toJSONString(userMessage));
-        System.out.println(userMessage.toString());
-    }
-
-    @PostConstruct
-    public void init(){
-        System.out.println("a");
+        log.info("收到用户信息1：{}", JSON.toJSONString(userMessage));
     }
 
 }
