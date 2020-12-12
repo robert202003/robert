@@ -36,15 +36,14 @@ robert                       -- 父项目，依赖管理
 │  ├─robert-common           -- 通用工程一级工程
 │  │  ├─robert-core          --核心基础包
 │  │  ├─robert-elastics      --elasticsearch
+│  │  ├─robert-i18n          --国际化
 │  │  ├─robert-id            --分布式唯一ID生成器
 │  │  ├─robert-log-record    --日志收集工具包
-│  │  ├─robert-mongo         --mongo 集成，封装了很多mongo的操作
 │  │  ├─robert-redis         --redis 操作集成，支持集群模式，包括了分布式锁的封装
-│  │  ├─robert-rabbit        --集成RabbitMQ
-│  ├─robert-docs             -- 项目文档
 │  ├─robert-gateway          -- 网关服务[9020]
-│  ├─robert-order-api         -- 订单服务[8030]
-│  ├─robert-user-api          -- 用户中心[8020]
+│  ├─robert-goods-api        -- 商品服务[8020]
+│  ├─robert-order-api        -- 订单服务[8030]
+│  ├─robert-user-api         -- 用户中心[8020]
 
 ```
 
