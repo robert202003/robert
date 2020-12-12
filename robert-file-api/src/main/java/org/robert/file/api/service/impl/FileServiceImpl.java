@@ -10,6 +10,7 @@ import org.robert.file.api.config.OssConfigBean;
 import org.robert.file.api.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
@@ -25,17 +26,21 @@ public class FileServiceImpl implements FileService {
     @Override
     public String upload(String applicationName, String moduleName, MultipartFile file) {
         byte[] bytes = null;
+        PutObjectResult putObject = null;
         try {
             bytes = file.getBytes();
+            OSS ossClient = new OSSClientBuilder().build(OssConfigBean.endpoint,
+                    ossConfigBean.getAccessKeyId(), ossConfigBean.getAccessKeySecret());
+
+            putObject = ossClient.putObject(ossConfigBean.getBucketName(),
+                    file.getOriginalFilename(), new ByteArrayInputStream(bytes));
+            log.info(JSON.toJSONString(putObject));
+            ossClient.shutdown();
+            return putObject.getETag();
         } catch (IOException e) {
+            log.error("上传文件到oss失败，{}",e);
         }
 
-        OSS ossClient = new OSSClientBuilder().build(OssConfigBean.endpoint,
-                ossConfigBean.getAccessKeyId(), ossConfigBean.getAccessKeySecret());
-
-        PutObjectResult putObject = ossClient.putObject(ossConfigBean.getBucketName(), file.getOriginalFilename(), new ByteArrayInputStream(bytes));
-        log.info(JSON.toJSONString(putObject));
-        ossClient.shutdown();
         return null;
     }
 }
