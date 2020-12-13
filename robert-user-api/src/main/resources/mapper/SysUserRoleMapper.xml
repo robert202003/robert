@@ -3,7 +3,7 @@
 <mapper namespace="org.robert.user.api.mapper.SysUserRoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="org.robert.user.api.model.SysUserRole">
+    <resultMap id="BaseResultMap" type="org.robert.user.api.entity.SysUserRole">
         <id column="user_role_id" property="userRoleId" />
         <id column="role_id" property="roleId" />
         <result column="user_id" property="userId" />

@@ -3,7 +3,7 @@
 <mapper namespace="org.robert.user.api.mapper.SysUserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="org.robert.user.api.model.SysUser">
+    <resultMap id="BaseResultMap" type="org.robert.user.api.entity.SysUser">
         <id column="user_id" property="userId" />
         <result column="app_id" property="appId" />
         <result column="org_id" property="orgId" />

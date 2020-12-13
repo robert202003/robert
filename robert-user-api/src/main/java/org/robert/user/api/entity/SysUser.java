@@ -139,11 +139,5 @@ public class SysUser implements Serializable {
     @Column(name = "update_time")
     private LocalDateTime updateTime;
 
-    /**
-     * 备注
-     */
-    @Column(name = "remark")
-    private String remark;
-
 
 }
