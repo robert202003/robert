@@ -5,6 +5,6 @@ spring:
     name: robert-file-api
 oss:
   endpoint: http://oss-cn-hangzhou.aliyuncs.com
-  accessKeyId: 1
-  accessKeySecret: 1
-  bucketName: 1
+  accessKeyId: LTAIkQQbhthUjlJV
+  accessKeySecret: OSejf5o0fhzUjV1eUQgUrreWPOJ1dm
+  bucketName: xiaoluozi
