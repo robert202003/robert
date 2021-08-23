@@ -61,7 +61,7 @@
 
         <logstash-logback-encoder>6.2</logstash-logback-encoder>
         <logback-kafka-appender>0.2.0-RC2</logback-kafka-appender>
-        <jsoup.version>1.12.1</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
     </properties>
 
 
