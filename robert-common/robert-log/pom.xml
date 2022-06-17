@@ -18,7 +18,7 @@
         <servlet.version>4.0.1</servlet.version>
         <slf4j-log4j.version>1.7.28</slf4j-log4j.version>
         <openfeign.version>10.3.0</openfeign.version>
-        <fastjson.version>1.2.59</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <slf4j.version>1.7.28</slf4j.version>
         <aspectj.version>1.9.4</aspectj.version>
     </properties>

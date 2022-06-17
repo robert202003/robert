@@ -49,7 +49,7 @@
         <hutool.version>4.5.10</hutool.version>
         <spring-boot-admin-client.version>2.1.6</spring-boot-admin-client.version>
         <spring-boot-admin-server.version>2.1.6</spring-boot-admin-server.version>
-        <fastjson.version>1.2.60</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <tk.mybatis.version>2.0.2</tk.mybatis.version>
         <nacos-client.version>1.1.0</nacos-client.version>
         <guava.version>20.0</guava.version>
