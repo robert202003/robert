@@ -18,7 +18,7 @@
         <xxl-rpc.version>1.4.0</xxl-rpc.version>
         <yl-sharding-jdbc-spring-boot-starter.version>4.0.0-RC1</yl-sharding-jdbc-spring-boot-starter.version>
         <hutool.version>4.5.10</hutool.version>
-        <xxl.version>2.0.2</xxl.version>
+        <xxl.version>2.3.1</xxl.version>
     </properties>
 
     <dependencies>
